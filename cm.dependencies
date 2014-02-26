@@ -1,0 +1,10 @@
+[
+ {
+   "repository": "android_kernel_zte_NX503A",
+   "target_path": "kernel/zte/NX503A"
+ },
+ {
+   "repository": "android_device_zte_msm8974-common",
+   "target_path": "device/zte/msm8974-common"
+ }
+]
