@@ -116,10 +116,10 @@ case "$usb_config" in
                     "msm")
                         case "$build_type" in
                             "eng")
-                                setprop persist.sys.usb.config mass_storage,adb
+                                setprop persist.sys.usb.config nubia,adb
                             ;;
                             *)
-                                setprop persist.sys.usb.config mass_storage
+                                setprop persist.sys.usb.config nubia
                             ;;
                         esac
                     ;;
@@ -163,8 +163,8 @@ esac
 # Add support for exposing lun0 as cdrom in mass-storage
 #
 target=`getprop ro.product.device`
-#cdromname="/system/driver.iso"
-#echo $cdromname > /sys/class/android_usb/android0/f_mass_storage/lun0/file
+cdromname="/system/driver.iso"
+echo $cdromname > /sys/class/android_usb/android0/f_mass_storage/lun0/file
 
 #
 # Select USB BAM - 2.0 or 3.0

@@ -106,6 +106,7 @@ lib/libomission_avoidance.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 lib/libril.so
+vendor/lib/libdstuils.so
 vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
 vendor/lib/libqmi_cci.so
@@ -138,7 +139,10 @@ vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 
 #FM
-lib/libqcomfm_jni.so
+#lib/libqcomfm_jni.so
+
+# NFC
+lib/hw/nfc.default.so
 
 
 # Camera
@@ -332,10 +336,10 @@ vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
 
 
-vendor/lib/liblistenhardware.so
-vendor/lib/liblistenjni.so
-vendor/lib/liblisten.so
-vendor/lib/liblistensoundmodel.so
+#vendor/lib/liblistenhardware.so
+#vendor/lib/liblistenjni.so
+#vendor/lib/liblisten.so
+#vendor/lib/liblistensoundmodel.so
 
 vendor/lib/libNimsWrap.so
 vendor/lib/libprofiler_msmadc.so

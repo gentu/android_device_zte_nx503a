@@ -41,9 +41,6 @@ DEVICE_PACKAGE_OVERLAYS += device/zte/NX503A/overlay
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/ramdisk/fstab.qcom:root/fstab.qcom \
      $(LOCAL_PATH)/ramdisk/init.poweroffcharge.rc:root/lpm.rc \
-     $(LOCAL_PATH)/ramdisk/init.qcom.factory.sh:root/init.qcom.factory.sh \
-     $(LOCAL_PATH)/ramdisk/init.qcom.syspart_fixup.sh:root/init.qcom.syspart_fixup.sh \
-     $(LOCAL_PATH)/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
      $(LOCAL_PATH)/ramdisk/init.qcom.rc:root/init.qcom.rc \
      $(LOCAL_PATH)/ramdisk/init.qcom.sh:root/init.qcom.sh \
      $(LOCAL_PATH)/ramdisk/init.target.rc:root/init.target.rc \
@@ -51,13 +48,16 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
      $(LOCAL_PATH)/ramdisk/init.nubia.sh:root/init.nubia.sh \
      $(LOCAL_PATH)/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc \
-     $(LOCAL_PATH)/ramdisk/sbin/security_boot_check:root/sbin/security_boot_check \
-#     $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+#     $(LOCAL_PATH)/ramdisk/sbin/security_boot_check:root/sbin/security_boot_check \
 
+# Recovery
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/recovery/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
+     $(LOCAL_PATH)//recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
 # USB driver
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/prebuilt/driver.iso:system/driver.iso
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/driver.iso:system/driver.iso
 	
 	
 # Charger images
@@ -104,21 +104,16 @@ PRODUCT_COPY_FILES += \
      
 # snd_soc_msm
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/snd_soc_msm/snd_soc_apq_Taiko_DB:system/etc/snd_soc_msm/snd_soc_apq_Taiko_DB \
-     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Taiko:system/etc/snd_soc_msm/snd_soc_msm_Taiko \
-     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Taiko_CDP:system/etc/snd_soc_msm/snd_soc_msm_Taiko_CDP \
-     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Taiko_Fluid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_Fluid \
-     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Taiko_liquid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_liquid \
-     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Taiko_liquid_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_Taiko_liquid_auxpcm \
+     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Taiko:system/etc/snd_soc_msm/snd_soc_msm_Taiko
+     
+# Bluetooth
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/bluetooth/bcm4339.hcd:system/vendor/firmware/bcm4339.hcd \
      
 # Thermald
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/thermald/thermald-8974.conf:system/etc/thermald-8974.conf \
 	$(LOCAL_PATH)/thermald/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf \
-  
-# device tree build tool
-PRODUCT_PACKAGES += \
-    dtbTool
     
 PRODUCT_PACKAGES += \
     Torch

@@ -1,6 +1,6 @@
 ## Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/gsm.mk)
-#$(call inherit-product, vendor/cm/config/cdma.mk)
+$(call inherit-product, vendor/cm/config/cdma.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -8,24 +8,21 @@ TARGET_SCREEN_WIDTH := 1080
 
 TARGET_BOOTANIMATION_NAME := 1080
 
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
-
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/zte/NX503A/full_NX503A.mk)
+
+# Enhanced NFC
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := NX503A
 PRODUCT_NAME := cm_NX503A
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := Z5S
-PRODUCT_MANUFACTURER := ZTE
+PRODUCT_MANUFACTURER := zte
 
 PRODUCT_DEFAULT_LANGUAGE := zh
 PRODUCT_DEFAULT_REGION := CN
