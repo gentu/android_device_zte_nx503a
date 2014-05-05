@@ -1,4 +1,4 @@
-# Android_device_zte_NX503A
+# Android_device_zte_nx503a
 
 Getting Started :
 
@@ -9,8 +9,8 @@ Getting Started :
 		repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
 		repo sync
 
-		mkdir -p device/zte/NX503A
-		git clone https://github.com/XMelancholy/android_device_zte_NX503A.git -b cm-11.0 device/zte/NX503A
+		mkdir -p device/zte/nx503a
+		git clone https://github.com/XMelancholy/android_device_zte_nx503a.git -b cm-11.0 device/zte/nx503a
 
 		mkdir -p device/zte/msm8974-common
 		git clone https://github.com/XMelancholy/android_device_zte_msm8974-common.git -b cm-11.0 device/zte/msm8974-common
@@ -22,16 +22,16 @@ Getting Started :
 Now connect your phone which have runing CM11 :
 
 Adb mode
-		cd device/zte/NX503A
+		cd device/zte/nx503a
 		./extract-files.sh
 
 unzip mode
-		cd device/zte/NX503A
+		cd device/zte/nx503a
 		./unzip-files.sh
 
 		cd ../../..
 		mkdir -p kernel/zte
-		git clone https://github.com/XMelancholy/android_kernel_zte_NX503A -b cm-11.0 kernel/zte/NX503A
+		git clone https://github.com/XMelancholy/android_kernel_zte_nx503a -b cm-11.0 kernel/zte/nx503a
 
 
 Download CM prebuilts : 
@@ -41,7 +41,7 @@ Download CM prebuilts :
 You are ready to build :
 
 		source build/envsetup.sh
-		lunch cm_NX503A-userdebug
+		lunch cm_nx503a-userdebug
 		make otapackage
 
 ENJOY!
