@@ -32,6 +32,7 @@ import android.os.SystemClock;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.telephony.Rlog;
+import android.telephony.SignalStrength;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -88,5 +89,84 @@ public class ZTEQualcommUiccRIL extends RIL implements CommandsInterface {
         }
         return cardStatus;
     }
+    
+    @Override
+    protected Object
+    responseSignalStrength(Parcel p) {
+        int numInts = 14;
+        int response[];
+        boolean isGsm = true;
+
+        /* TODO: Add SignalStrength class to match RIL_SignalStrength */
+        response = new int[numInts];
+        for (int i = 0 ; i < numInts ; i++) {
+			response[i] = p.readInt();
+        }
+        
+        if(response[2] > 10)
+        	response[2] = response[2]-10;
+        if(response[4] > 10)
+        	response[4] = response[4]-10;
+
+        isGsm = (response[13] != 0);
+/*
+------------------------------------------
+    0     mGsmSignalStrength = m.getInt("GsmSignalStrength");
+    1     mGsmBitErrorRate = m.getInt("GsmBitErrorRate");
+    2     mCdmaDbm = m.getInt("CdmaDbm");
+    3     mCdmaEcio = m.getInt("CdmaEcio");
+    4     mEvdoDbm = m.getInt("EvdoDbm");
+    5     mEvdoEcio = m.getInt("EvdoEcio");
+    6     mEvdoSnr = m.getInt("EvdoSnr");
+    7     mLteSignalStrength = m.getInt("LteSignalStrength"); // 0 to 63
+    8     mLteRsrp = m.getInt("LteRsrp"); // -44 to -140
+    9     mLteRsrq = m.getInt("LteRsrq");
+   10     mLteRssnr = m.getInt("LteRssnr"); // -200 dB to +300
+   11     mLteCqi = m.getInt("LteCqi");
+   12     mLteCqi = m.getInt("LteCqi");
+   13     isGsm = m.getBoolean("isGsm");
+------------------------------------------
+INVALID = 0x7FFFFFFF (2147483647)
+
+getAsuLevel() 
+  -->getLteLevel()----> getGsmAsuLevel() --> getGsmSignalStrength() --> mGsmSignalStrength
+                  \---> getLteAsuLevel() --> mLteRsrp == INVALID? 255 : mLteRsrp +140
+getDbm()
+  -->getLteLevel()----> getGsmDbm() --> (-113 + 2x mGsmSignalStrength)
+                  \---> mLteRsrp
+
+frameworks/base/telephony/java/android/telephony/SignalStrength.java
+------------------------------------------
+*/
+        return new SignalStrength(response[0], 
+        						  response[1], 
+        						  response[2], 
+        						  response[3], 
+        						  response[4], 
+        						  response[5], 
+        						  response[6], 
+        						  response[7],
+        						  response[8], 
+        						  response[9], 
+        						  response[10], 
+        						  response[11], 
+        						  response[12], 
+        						  isGsm);
+    }
+    
+    @Override
+    public void getImsRegistrationState(Message result) {
+        if(mRilVersion >= 8)
+            super.getImsRegistrationState(result);
+        else {
+            if (result != null) {
+                CommandException ex = new CommandException(
+                    CommandException.Error.REQUEST_NOT_SUPPORTED);
+                AsyncResult.forMessage(result, null, ex);
+                result.sendToTarget();
+            }
+        }
+    }
+
 }
 

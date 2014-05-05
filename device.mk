@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+$(call inherit-product, vendor/zte/NX503A/NX503A-vendor.mk)
+DEVICE_PACKAGE_OVERLAYS += device/zte/nx503a/overlay
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -21,12 +25,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Recovery allowed devices
 TARGET_OTA_ASSERT_DEVICE := NX503A
 
-# Inherit from msm8974-common
-$(call inherit-product, device/zte/msm8974-common/msm8974.mk)
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-DEVICE_PACKAGE_OVERLAYS += device/zte/nx503a/overlay
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 #ifeq ($(TARGET_PREBUILT_KERNEL),)
 #	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
@@ -47,18 +46,13 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/ramdisk/init.nubia.usb.rc:root/init.nubia.usb.rc \
      $(LOCAL_PATH)/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
      $(LOCAL_PATH)/ramdisk/init.nubia.sh:root/init.nubia.sh \
-     $(LOCAL_PATH)/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc \
-#     $(LOCAL_PATH)/ramdisk/sbin/security_boot_check:root/sbin/security_boot_check \
+     $(LOCAL_PATH)/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # Recovery
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/recovery/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
-     $(LOCAL_PATH)//recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+	$(LOCAL_PATH)/recovery/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+	$(LOCAL_PATH)/recovery/postrecoveryboot.sh:root/sbin/postrecoveryboot.sh
 
-# USB driver
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/prebuilt/driver.iso:system/driver.iso
-	
 	
 # Charger images
 PRODUCT_COPY_FILES += \
@@ -102,20 +96,19 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/idc/qwerty.idc:system/usr/idc/qwerty.idc \
      $(LOCAL_PATH)/idc/zte_cap_touchscreen.idc:system/usr/idc/zte_cap_touchscreen.idc
      
-# snd_soc_msm
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/snd_soc_msm/snd_soc_msm_Taiko:system/etc/snd_soc_msm/snd_soc_msm_Taiko
-     
 # Bluetooth
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/bluetooth/bcm4339.hcd:system/vendor/firmware/bcm4339.hcd \
+	$(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
      
 # Thermald
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/thermald/thermald-8974.conf:system/etc/thermald-8974.conf \
-	$(LOCAL_PATH)/thermald/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf \
+	$(LOCAL_PATH)/thermald/thermal-engine.conf:system/etc/thermal-engine-8974.conf \
+	$(LOCAL_PATH)/thermald/thermal-engine.conf:system/etc/thermal-engine.conf
     
 PRODUCT_PACKAGES += \
     Torch
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+# Inherit from msm8974-common
+$(call inherit-product, device/zte/msm8974-common/msm8974.mk)
+
