@@ -22,10 +22,12 @@ Getting Started :
 Now connect your phone which have runing CM11 :
 
 Adb mode
+
 		cd device/zte/nx503a
 		./extract-files.sh
 
 unzip mode
+
 		cd device/zte/nx503a
 		./unzip-files.sh
 
