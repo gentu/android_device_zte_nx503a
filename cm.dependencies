@@ -19,7 +19,7 @@
  },
  {
    "remote": "github",
-   "repository": "android_device_zte_msm8974-common",
+   "repository": "XMelancholy/android_device_zte_msm8974-common",
    "target_path": "device/zte/msm8974-common"
    "revision": "cm-11.0"
  }
