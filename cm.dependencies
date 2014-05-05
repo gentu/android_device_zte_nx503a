@@ -1,5 +1,10 @@
 [
  {
+   "repository": "android_device_qcom-qcom_common",
+   "target_path": "device/qcom/qcom_common"
+ },
+
+ {
    "repository": "android_kernel_zte_NX503A",
    "target_path": "kernel/zte/NX503A"
  },
