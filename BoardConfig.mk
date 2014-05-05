@@ -33,12 +33,12 @@
 -include device/zte/msm8974-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/zte/NX503A/BoardConfigVendor.mk
+-include vendor/zte/nx503a/BoardConfigVendor.mk
 
 TARGET_BOOTLOADER_NAME		 := NX503A
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 
-TARGET_BOARD_INFO_FILE := device/zte/NX503A/board-info.txt
+TARGET_BOARD_INFO_FILE := device/zte/nx503a/board-info.txt
 
 BOARD_KERNEL_CMDLINE 	:= console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
 #androidboot.selinux=permissive
@@ -54,33 +54,33 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE 	:= 1288488960	#1.2G system
 BOARD_USERDATAIMAGE_PARTITION_SIZE 	:= 2684354560	#2.5G data
 BOARD_FLASH_BLOCK_SIZE 				:= 131072
 
-#TARGET_PREBUILT_KERNEL := device/zte/NX503A/kernel
+#TARGET_PREBUILT_KERNEL := device/zte/nx503a/kernel
 
-TARGET_KERNEL_SOURCE := kernel/zte/NX503A
-TARGET_KERNEL_CONFIG := cm_NX503A_defconfig
+TARGET_KERNEL_SOURCE := kernel/zte/nx503a
+TARGET_KERNEL_CONFIG := cm_nx503a_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 
 TARGET_ZTEMT_DTS := true
 
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_CUSTOM_BOOTIMG_MK := device/zte/NX503A/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
 
 TARGET_KERNEL_CUSTOM_TOOLCHAIN:= linaro-4.8
 
 #RIL
-BOARD_RIL_CLASS := ../../../device/zte/NX503A/ril/
+BOARD_RIL_CLASS := ../../../device/zte/nx503a/ril/
 
 # Init
 TARGET_NO_INITLOGO := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zte/NX503A/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/zte/NX503A/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zte/nx503a/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/zte/nx503a/bluetooth/libbt_vndcfg.txt
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/zte/NX503A/init/init_NX503A.c
+TARGET_LIBINIT_DEFINES_FILE := device/zte/nx503a/init/init_nx503a.c
 
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 23
@@ -104,7 +104,7 @@ BOARD_USES_MMCUTILS := true
 
 BOARD_RECOVERY_SWIPE 				:= true
 RECOVERY_FSTAB_VERSION 				:= 2
-TARGET_RECOVERY_FSTAB 				:= device/zte/NX503A/ramdisk/fstab.qcom
+TARGET_RECOVERY_FSTAB 				:= device/zte/nx503a/ramdisk/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT 		:= "RGBX_8888"
 BOARD_USE_CUSTOM_RECOVERY_FONT 		:= \"roboto_23x41.h\"
 

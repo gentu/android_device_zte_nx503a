@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=zte
-DEVICE=NX503A
+DEVICE=nx503a
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*

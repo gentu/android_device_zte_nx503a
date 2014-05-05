@@ -12,14 +12,14 @@ TARGET_BOOTANIMATION_NAME := 1080
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/zte/NX503A/full_NX503A.mk)
+$(call inherit-product, device/zte/nx503a/full_nx503a.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := NX503A
-PRODUCT_NAME := cm_NX503A
+PRODUCT_DEVICE := nx503a
+PRODUCT_NAME := cm_nx503a
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := Z5S
 PRODUCT_MANUFACTURER := zte

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=zte
-DEVICE=NX503A
+DEVICE=nx503a
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

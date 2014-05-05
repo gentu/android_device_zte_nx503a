@@ -26,7 +26,7 @@ $(call inherit-product, device/zte/msm8974-common/msm8974.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/zte/NX503A/overlay
+DEVICE_PACKAGE_OVERLAYS += device/zte/nx503a/overlay
 
 #ifeq ($(TARGET_PREBUILT_KERNEL),)
 #	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
