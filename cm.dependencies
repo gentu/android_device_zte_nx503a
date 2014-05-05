@@ -1,7 +1,7 @@
 [
  {
-   "repository": "android_device_qcom-qcom_common",
-   "target_path": "device/qcom/qcom_common"
+   "repository": "android_device_qcom_common",
+   "target_path": "device/qcom/common"
  },
 
  {
