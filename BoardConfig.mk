@@ -65,7 +65,7 @@ TARGET_ZTEMT_DTS := true
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
 
-TARGET_KERNEL_CUSTOM_TOOLCHAIN:= linaro-4.8
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN:= linaro-4.8
 
 #RIL
 BOARD_RIL_CLASS := ../../../device/zte/nx503a/ril/
