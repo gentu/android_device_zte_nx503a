@@ -17,7 +17,7 @@ bin/exfat-dump
 bin/exfat-fsck
 
 # Thermal
-bin/thermald
+#bin/thermald
 bin/thermal-engine
 
 
@@ -33,19 +33,19 @@ lib/libloc_api_v02.so
 
 # Audio
 vendor/lib/libaudioalsa.so
-vendor/lib/libacdbloader.so
+#vendor/lib/libacdbloader.so
 vendor/lib/libaudcal.so
 vendor/lib/libacdbmapper.so
-vendor/lib/libcsd-client.so
+#vendor/lib/libcsd-client.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
-etc/Bluetooth_cal.acdb
-etc/General_cal.acdb
-etc/Handset_cal.acdb
-etc/Global_cal.acdb
-etc/Hdmi_cal.acdb
-etc/Headset_cal.acdb
-etc/Speaker_cal.acdb
+#etc/Bluetooth_cal.acdb
+#etc/General_cal.acdb
+#etc/Handset_cal.acdb
+#etc/Global_cal.acdb
+#etc/Hdmi_cal.acdb
+#etc/Headset_cal.acdb
+#etc/Speaker_cal.acdb
 
 
 # Adreno GPU
@@ -68,8 +68,8 @@ vendor/lib/librs_adreno.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 
-vendor/firmware/a330_pfp.fw
-vendor/firmware/a330_pm4.fw
+#vendor/firmware/a330_pfp.fw
+#vendor/firmware/a330_pm4.fw
 
 
 # Media
@@ -97,16 +97,16 @@ bin/qmuxd
 bin/rild
 bin/rmt_storage
 vendor/lib/libdiag.so
-lib/libdsutils.so
+#lib/libdsutils.so
 vendor/lib/libdsi_netctrl.so
-lib/libfactoryutil.so
+#lib/libfactoryutil.so
 vendor/lib/libidl.so
-lib/libnetmgr.so
-lib/libomission_avoidance.so
+#lib/libnetmgr.so
+#lib/libomission_avoidance.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 lib/libril.so
-vendor/lib/libdstuils.so
+#vendor/lib/libdstuils.so
 vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
 vendor/lib/libqmi_cci.so
@@ -119,10 +119,10 @@ vendor/lib/libqmi_csvt_srvc.so
 lib/libreference-ril.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libril-qc-qmi-1.so
-vendor/lib/librmpb.so
+#vendor/lib/librmpb.so
 
 vendor/lib/libquipc_os_api.so
-vendor/lib/libquipc_ulp_adapter.so
+#vendor/lib/libquipc_ulp_adapter.so
 
 
 # Time services
@@ -142,7 +142,7 @@ vendor/lib/libsensor_reg.so
 #lib/libqcomfm_jni.so
 
 # NFC
-lib/hw/nfc.default.so
+#lib/hw/nfc.default.so
 
 
 # Camera
@@ -226,8 +226,8 @@ vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegenc.so
 
 
-lib/libHDR.so
-lib/libmorpho_noise_reduction.so
+#lib/libHDR.so
+#lib/libmorpho_noise_reduction.so
 
 
 # Wfd
@@ -250,10 +250,10 @@ vendor/lib/libwfduibcsrc.so
 
 
 #WIFI
-etc/firmware/bcm4339/fw_bcmdhd_apsta.bin
-etc/firmware/bcm4339/fw_bcmdhd_p2p.bin
-etc/firmware/bcm4339/fw_mfgtest.bin
-etc/firmware/bcm4339/nvram.txt
+#etc/firmware/bcm4339/fw_bcmdhd_apsta.bin
+#etc/firmware/bcm4339/fw_bcmdhd_p2p.bin
+#etc/firmware/bcm4339/fw_mfgtest.bin
+#etc/firmware/bcm4339/nvram.txt
 ##etc/wifi/WCNSS_qcom_cfg.ini
 ##etc/wifi/wpa_supplicant_wcn.conf
 
@@ -265,17 +265,17 @@ vendor/lib/libqc-opt.so
 
 # DRM
 bin/qseecomd
-lib/libdrmdecrypt.so
+#lib/libdrmdecrypt.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
 
 vendor/lib/libprdrmdecrypt.so
-vendor/lib/drm/libdrmwvmplugin.so
+#vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/libdrmdiag.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-vendor/lib/libWVStreamControlAPI_L1.so
+#vendor/lib/libwvdrm_L1.so
+#vendor/lib/libwvm.so
+#vendor/lib/libWVStreamControlAPI_L1.so
 
 vendor/lib/libSHIMDivxDrm.so
 
@@ -302,14 +302,14 @@ etc/firmware/venus.b04
 
 
 
-lib/libvss_dmi_qcci.so
-lib/libvss_common_iface.so
-lib/libvss_common_idl.so
-lib/libvss_nv_iface.so
-lib/libvss_nv_core.so
-lib/libvss_nv_idl.so
-lib/libvss_ims_qcci.so
-lib/libvss_common_core.so
+#lib/libvss_dmi_qcci.so
+#lib/libvss_common_iface.so
+#lib/libvss_common_idl.so
+#lib/libvss_nv_iface.so
+#lib/libvss_nv_core.so
+#lib/libvss_nv_idl.so
+#lib/libvss_ims_qcci.so
+#lib/libvss_common_core.so
 
 
 
