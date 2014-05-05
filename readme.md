@@ -31,6 +31,8 @@ unzip mode
 		cd device/zte/nx503a
 		./unzip-files.sh
 
+kernel 
+
 		cd ../../..
 		mkdir -p kernel/zte
 		git clone https://github.com/XMelancholy/android_kernel_zte_nx503a -b cm-11.0 kernel/zte/nx503a
