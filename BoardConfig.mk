@@ -3,35 +3,35 @@
 
 -include device/zte/msm8974-common/BoardConfigCommon.mk
 
-TARGET_BOOTLOADER_NAME := NX503A
-TARGET_BOOTLOADER_BOARD_NAME := MSM8974
-
+TARGET_BOOTLOADER_NAME := nubia
 TARGET_BOARD_INFO_FILE := device/zte/nx503a/board-info.txt
 
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
-#androidboot.selinux=permissive
+# Flags
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
+# Kernel information
+TARGET_KERNEL_SOURCE := kernel/zte/nx503a
+TARGET_KERNEL_CONFIG := cm_nx503a_defconfig
+TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000 
 
-TARGET_KERNEL_SOURCE := kernel/zte/nx503a
-TARGET_KERNEL_CONFIG := cm_nx503a_defconfig
-TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
-
+BOARD_KERNEL_SEPARATED_DT := true
 TARGET_ZTEMT_DTS := true
 
-BOARD_KERNEL_SEPARATED_DT := true
+# Custom boot
 BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
 
-
+# Partition information
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1288488960
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2684354560
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-#RIL
+# RIL
 BOARD_RIL_CLASS := ../../../device/zte/nx503a/ril/
 
 # Init
@@ -46,14 +46,10 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := device/zte/nx503a/init/init_nx503a.c
 
+# Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 23
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
-#SKIP_SET_METADATA :=true
-
-# Flags
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Revcovery
 BOARD_HAS_NO_SELECT_BUTTON := true
