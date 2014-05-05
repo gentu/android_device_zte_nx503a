@@ -18,6 +18,13 @@ Getting Started :
 		mkdir -p device/qcom/common
 		git clone https://github.com/CyanogenMod/android_device_qcom_common.git -b cm-11.0 device/qcom/common
 
+		mkdir -p hardware/qcom/display-caf-new
+		git clone https://github.com/CyanogenMod/android_hardware_qcom_display-caf-new.git -b cm-11.0 hardware/qcom/display-caf-new
+
+		mkdir -p hardware/qcom/media-caf-new
+		git clone https://github.com/CyanogenMod/android_hardware_qcom_media-caf-new.git -b cm-11.0 hardware/qcom/media-caf-new
+
+
 
 Now connect your phone which have runing CM11 :
 
