@@ -53,10 +53,10 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         return;
 
     /* NX503A */
-    property_set("ro.build.fingerprint", "nubia/Z5S/NX503A:4.4.2/KOT49H/v1.22:user/release-keys");
-    property_set("ro.build.description", "cm_NX503A-userdebug 4.4.2 KOT49H v1.22 release-keys");
+    property_set("ro.build.fingerprint", "XianGxin/Z5S/NX503A:4.4.2/XianGxin/v1.30:user/release-keys");
+    property_set("ro.build.description", "cm_NX503A-userdebug 4.4.2 XianGxin v1.30 release-keys");
     property_set("ro.product.model", "Z5S");
     property_set("ro.product.device", "NX503A");
-    property_set("ro.telephony.ril.v3", "qcomdsds");
-        
+    property_set("ro.telephony.ril_class", "ZTEQualcommUiccRIL");
+    property_set("ro.telephony.ril.v3", "qcomdsds,signalstrength");
 }
