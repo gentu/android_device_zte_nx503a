@@ -14,7 +14,7 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 #TARGET_KERNEL_CONFIG := cm_nx503a_defconfig
 #TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 # prebuilt kernel
-TARGET_PREBUILT_KERNEL := device/zte/nx503a/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/zte/nx503a/kernel
 
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
 BOARD_KERNEL_BASE := 0x00000000
