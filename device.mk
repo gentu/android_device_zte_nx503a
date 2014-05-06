@@ -88,6 +88,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Torch
 
+# Recovery Options
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cwm.forbid_format=/persist,/firmware,/boot,/sbl1,/tz,/rpm,/sdi,/aboot,/splash,/custom \
+    ro.cwm.forbid_mount=/persist,/firmware
+
 # Inherit from msm8974-common
 $(call inherit-product, device/zte/msm8974-common/msm8974.mk)
 
