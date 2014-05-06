@@ -300,9 +300,6 @@ etc/firmware/venus.b02
 etc/firmware/venus.b03
 etc/firmware/venus.b04
 
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
-etc/firmware/synaptics.img
 
 
 #lib/libvss_dmi_qcci.so
@@ -363,16 +360,3 @@ vendor/lib/libxml.so
 vendor/lib/pp_proc_plugin.so
 vendor/lib/libP11Notify.so
 #vendor/lib/liboemcrypto.so
-
-bin/gsiff_daemon
-bin/loki_tool
-bin/wiperiface_v02
-bin/verifier
-bin/radish
-bin/regdbdump
-bin/rfs_access
-bin/perf
-bin/gdbjithelper
-driver.iso
-
-
