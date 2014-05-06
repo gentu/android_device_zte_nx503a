@@ -10,16 +10,19 @@ TARGET_BOARD_INFO_FILE := device/zte/nx503a/board-info.txt
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Kernel information
-TARGET_KERNEL_SOURCE := kernel/zte/nx503a
-TARGET_KERNEL_CONFIG := cm_nx503a_defconfig
-TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
+#TARGET_KERNEL_SOURCE := kernel/zte/nx503a
+#TARGET_KERNEL_CONFIG := cm_nx503a_defconfig
+#TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
+# prebuilt kernel
+TARGET_PREBUILT_KERNEL := device/zte/nx503a/prebuilt/kernel
+
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000 
 
 BOARD_KERNEL_SEPARATED_DT := true
-TARGET_ZTEMT_DTS := true
+TARGET_ZTEMT_DTS := false
 
 # Custom boot
 BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
