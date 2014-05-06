@@ -119,8 +119,8 @@ ro.ireader.channel=109188
 
 #/* ZTEMT START */
 #property to support SSR && AP RESET when kernel panic.(1,1) to disable, (3,0) to enable
-#persist.sys.ssr.restart_level=3
-#persist.sys.ap.restart_level=0
+persist.sys.ssr.restart_level=3
+persist.sys.ap.restart_level=0
 ril.ipv6.rmnet0.enable=0
 persist.radio.apm_sim_not_pwdn=1
 #/* ZTEMT END */
