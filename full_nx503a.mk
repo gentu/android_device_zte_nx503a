@@ -21,7 +21,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/zte/nx503a/device.mk)
+$(call inherit-product, device/zte/nx503a/nx503a.mk)
 PRODUCT_DEVICE := NX503A
 PRODUCT_NAME := full_NX503A
 PRODUCT_BRAND := nubia
