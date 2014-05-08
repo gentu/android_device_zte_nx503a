@@ -16,7 +16,8 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-$(call inherit-product, vendor/zte/NX503A/NX503A-vendor.mk)
+$(call inherit-product, vendor/zte/nx503a/nx503a-vendor.mk)
+
 DEVICE_PACKAGE_OVERLAYS += device/zte/nx503a/overlay
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
