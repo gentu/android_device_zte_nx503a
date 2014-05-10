@@ -3,6 +3,15 @@
 #
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
 
 #add mayu
 persist.demo.hdmirotationlock=false
@@ -81,19 +90,8 @@ persist.radio.fill_eons=1
 persist.radio.kickstart=on
 persist.radio.tdscdma_present=2
 
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-
 persist.sys.strictmode.disable=true
 #debug.egl.recordable.rgba8888=1
-
 
 #
 #snapdragon value add features
@@ -110,7 +108,6 @@ persist.aanc.enable=false
 persist.debug.wfd.enable=1
 #property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
-
 
 #Dolby DS1 DOLBY_UDC
 dmid=3067269873
@@ -129,9 +126,6 @@ persist.radio.apm_sim_not_pwdn=1
 persist.camera.tintless =false
 #/* ZTEMT END */
 
-#
-# ADDITIONAL_BUILD_PROPERTIES
-#
 ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 persist.sys.power.sound=1
 drm.service.enabled=true
@@ -139,18 +133,5 @@ persist.factory.keypad_type=standard_w_camera_wo_search
 persist.factory.receiver_volume=10
 persist.factory.loopback_volume=12
 
-
-
-# default local
-persist.sys.timezone=Asia/Shanghai
-persist.sys.language=zh
-persist.sys.region=CN
-persist.sys.country=CN
-
-
 ro.config.vc_call_vol_steps=4
 
-
-#persist.sys.gesture=on
-
-#persist.sys.image.enhance=i

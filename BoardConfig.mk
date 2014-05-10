@@ -23,6 +23,7 @@ TARGET_ZTEMT_DTS := true
 
 # Custom boot
 BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
+BOARD_CUSTOM_PREBUILT_KERNEL := true
 
 # Partition information
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
@@ -42,9 +43,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zte/nx503a/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/zte/nx503a/bluetooth/libbt_vndcfg.txt
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/zte/nx503a/init/init_nx503a.c
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
@@ -62,6 +61,9 @@ BOARD_USES_MMCUTILS := true
 BOARD_RECOVERY_SWIPE := true
 RECOVERY_FSTAB_VERSION := 2
 TARGET_RECOVERY_FSTAB := device/zte/nx503a/ramdisk/fstab.qcom
+TARGET_RECOVERY_INITRC := device/zte/nx503a/recovery/init.rc
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
+# ota
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=NX503A BUILD_FINGERPRINT=nubia/NX503A/NX503A:4.2.2/JDQ39/eng.nubia.20140210.165901:user/release-keys PRIVATE_BUILD_DESC="NX503A-user 4.2.2 JDQ39 eng.nubia.20140210.165901 release-keys"

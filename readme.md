@@ -45,6 +45,22 @@ kernel
 		git clone https://github.com/XMelancholy/android_kernel_zte_nx503a -b cm-11.0 kernel/zte/nx503a
 
 
+Patch android source code :
+
+		patch -p1 < device/zte/nx503a/patches/frameworks_base.patch
+		patch -p1 < device/zte/nx503a/patches/vendor_cm.patch
+
+
+Our step is optional!!! Use only if you going to sync CM 11 source code daily, than simple revert each patch before you sync CM 11 source code :
+
+		patch -p1 -R < device/zte/nx503a/patches/frameworks_base.patch
+		patch -p1 -R < device/zte/nx503a/patches/vendor_cm.patch
+		repo forall -p -c 'git checkout -f'
+		repo sync
+		patch -p1 < device/zte/nx503a/patches/frameworks_base.patch
+		patch -p1 < device/zte/nx503a/patches/vendor_cm.patch
+
+
 Download CM prebuilts : 
 
 		./vendor/cm/get-prebuilts

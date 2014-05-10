@@ -13,7 +13,7 @@
  },
  {
    "remote": "github",
-   "repository": "XMelancholy/android_kernel_zte_NX503A",
+   "repository": "XMelancholy/android_kernel_zte_nx503a",
    "target_path": "kernel/zte/NX503A"
    "revision": "cm-11.0"
  },
