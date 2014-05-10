@@ -28,20 +28,15 @@ Getting Started :
 
 Now connect your phone which have runing CM11 :
 
-Adb mode
+vendor
 
-		cd device/zte/nx503a
-		./extract-files.sh
+		mkdir -p vendor/zte/nx503a
+		git clone https://github.com/XMelancholy/android_vendor_zte_nx503a -b cm-11.0 vendor/zte/nx503a
 
-unzip mode
-
-		cd device/zte/nx503a
-		./unzip-files.sh
 
 kernel 
 
-		cd ../../..
-		mkdir -p kernel/zte
+		mkdir -p kernel/zte/nx503a
 		git clone https://github.com/XMelancholy/android_kernel_zte_nx503a -b cm-11.0 kernel/zte/nx503a
 
 
