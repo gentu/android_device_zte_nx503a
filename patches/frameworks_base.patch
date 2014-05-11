@@ -1,174 +1,84 @@
-diff --git a/frameworks/base/data/keyboards/Generic.kcm b/frameworks/base/data/keyboards/Generic.kcm
-index 695a74f..782a701 100644
---- a/frameworks/base/data/keyboards/Generic.kcm
-+++ b/frameworks/base/data/keyboards/Generic.kcm
-@@ -477,4 +477,128 @@ key ESCAPE {
-     ctrl:                               fallback MENU
- }
- 
--### Gamepad buttons are handled by the view root ###
-+### Gamepad buttons ###
-+
-+key BUTTON_A {
-+    base:                               fallback BACK
-+}
-+
-+key BUTTON_B {
-+    base:                               fallback BACK
-+}
-+
-+key BUTTON_C {
-+    base:                               fallback BACK
-+}
-+
-+key BUTTON_X {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_Y {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_Z {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_L1 {
-+    base:                               none
-+}
-+
-+key BUTTON_R1 {
-+    base:                               none
-+}
-+
-+key BUTTON_L2 {
-+    base:                               none
-+}
-+
-+key BUTTON_R2 {
-+    base:                               none
-+}
-+
-+key BUTTON_THUMBL {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_THUMBR {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_START {
-+    base:                               fallback HOME
-+}
-+
-+key BUTTON_SELECT {
-+    base:                               fallback MENU
-+}
-+
-+key BUTTON_MODE {
-+    base:                               fallback MENU
-+}
-+
-+key BUTTON_1 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_2 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_3 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_4 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_5 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_6 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_7 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_8 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_9 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_10 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_11 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_12 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_13 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_14 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_15 {
-+    base:                               fallback DPAD_CENTER
-+}
-+
-+key BUTTON_16 {
-+    base:                               fallback DPAD_CENTER
-+}
+#
+#	修改：      frameworks/base/data/keyboards/Generic.kl
+#	修改：      frameworks/base/policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
+#
 diff --git a/frameworks/base/data/keyboards/Generic.kl b/frameworks/base/data/keyboards/Generic.kl
-index 1413319..10f78ad 100644
+index 1413319..a93d44d 100644
 --- a/frameworks/base/data/keyboards/Generic.kl
 +++ b/frameworks/base/data/keyboards/Generic.kl
-@@ -121,7 +121,10 @@ key 98    NUMPAD_DIVIDE
+@@ -121,7 +121,7 @@ key 98    NUMPAD_DIVIDE
  key 99    SYSRQ
  key 100   ALT_RIGHT
  # key 101 "KEY_LINEFEED"
 -key 102   MOVE_HOME
-+#/* ZTEMT Modify by luochangyang, 2013/03/27 */
-+#key 102   MOVE_HOME
 +key 102   HOME
-+#/* ZTEMT END */
  key 103   DPAD_UP
  key 104   PAGE_UP
  key 105   DPAD_LEFT
-@@ -158,7 +161,10 @@ key 128   MEDIA_STOP
- # key 136 "KEY_FIND"
- # key 137 "KEY_CUT"
- # key 138 "KEY_HELP"
--key 139   MENU              WAKE_DROPPED
-+#/* ZTEMT Modify by luochangyang, 2013/06/04 */
-+#key 139   MENU              WAKE_DROPPED
-+key 139   MENU
-+#/* ZTEMT END */
- key 140   CALCULATOR
- # key 141 "KEY_SETUP"
- key 142   POWER             WAKE
-@@ -177,7 +183,10 @@ key 152   POWER             WAKE
- key 155   ENVELOPE
- key 156   BOOKMARK
- # key 157 "KEY_COMPUTER"
--key 158   BACK              WAKE_DROPPED
-+#/* ZTEMT Modify by luochangyang, 2013/06/04 */
-+#key 158   BACK              WAKE_DROPPED
-+key 158   BACK
-+#/* ZTEMT END */
- key 159   FORWARD
- key 160   MEDIA_CLOSE
- key 161   MEDIA_EJECT
+@@ -191,7 +191,7 @@ key 168   MEDIA_REWIND
+ key 169   CALL
+ # key 170 "KEY_ISO"
+ key 171   MUSIC
+-key 172   HOME
++key 172   MOVE_HOME
+ # key 173 "KEY_REFRESH"
+ # key 174 "KEY_EXIT"
+ # key 175 "KEY_MOVE"
+diff --git a/frameworks/base/policy/src/com/android/internal/policy/impl/PhoneWindowManager.java b/frameworks/base/policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
+index 0500876..30dd184 100644
+--- a/frameworks/base/policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
++++ b/frameworks/base/policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
+@@ -2431,6 +2431,22 @@ public class PhoneWindowManager implements WindowManagerPolicy {
+             WindowManager.LayoutParams.TYPE_SYSTEM_ERROR,
+         };
+ 
++    private void setHwKeyVib(WindowState win) {
++        WindowManager.LayoutParams attrs;
++        Intent service;
++        ContentResolver res;
++
++		// If a system window has focus, then it doesn't make sense
++		// right now to interact with applications.
++		attrs = win != null ? win.getAttrs() : null;
++		service = new Intent();
++		res = mContext.getContentResolver();
++		if(1 == Settings.System.getInt(res, Settings.System.HAPTIC_FEEDBACK_ENABLED,0))//when setting feedback enable
++		{
++			performHapticFeedbackLw(null, HapticFeedbackConstants.KEYBOARD_TAP, true); //add by syhost
++		}
++    }
++
+     /** {@inheritDoc} */
+     @Override
+     public long interceptKeyBeforeDispatching(WindowState win, KeyEvent event, int policyFlags) {
+@@ -2539,6 +2555,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
+                     return -1;
+                 }
+ 
++		setHwKeyVib(win);
++
+                 // Go home!
+                 launchHomeFromHotKey();
+                 return -1;
+@@ -2612,6 +2630,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
+                 }
+                 if (repeatCount == 0) {
+                     mMenuPressed = true;
++                    setHwKeyVib(win);
+                     if (mEnableShiftMenuBugReports && (metaState & chordBug) == chordBug) {
+                         Intent intent = new Intent(Intent.ACTION_BUG_REPORT);
+                         mContext.sendOrderedBroadcast(intent, null);
+@@ -2743,9 +2762,13 @@ public class PhoneWindowManager implements WindowManagerPolicy {
+             }
+             return -1;
+         } else if (keyCode == KeyEvent.KEYCODE_BACK) {
++		if (down && repeatCount == 0) {
++			setHwKeyVib(win);
++		}
+             if (Settings.Secure.getIntForUser(mContext.getContentResolver(),
+                     Settings.Secure.KILL_APP_LONGPRESS_BACK, 0, UserHandle.USER_CURRENT) == 1) {
+                 if (down && repeatCount == 0) {
++		setHwKeyVib(win);
+                     mHandler.postDelayed(mBackLongPress, mBackKillTimeout);
+                 }
+             }
