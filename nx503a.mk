@@ -1,23 +1,87 @@
-# Ramdisk
+# These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/ramdisk/fstab.qcom:root/fstab.qcom \
-     $(LOCAL_PATH)/ramdisk/init.poweroffcharge.rc:root/lpm.rc \
-     $(LOCAL_PATH)/ramdisk/init.qcom.rc:root/init.qcom.rc \
-     $(LOCAL_PATH)/ramdisk/init.qcom.sh:root/init.qcom.sh \
-     $(LOCAL_PATH)/ramdisk/init.target.rc:root/init.target.rc \
-     $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
-     $(LOCAL_PATH)/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
+    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
+    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml\
 
-# keylayout
+# Audio
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
-     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
 
-# idc
+# Bluetooth
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
-     $(LOCAL_PATH)/idc/zte_cap_touchscreen.idc:system/usr/idc/zte_cap_touchscreen.idc
-     
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+
+# IR
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml
+
+# GSM and CDMA
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+
+# NFC access control + feature files + configuration
+PRODUCT_COPY_FILES += \
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
+
+# NFCEE access control
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access.xml
+else
+    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access_debug.xml
+endif
+
+# Custom init / uevent
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/fstab.qcom:root/fstab.qcom \
+     $(LOCAL_PATH)/configs/init.poweroffcharge.rc:root/lpm.rc \
+     $(LOCAL_PATH)/configs/init.qcom.rc:root/init.qcom.rc \
+     $(LOCAL_PATH)/configs/init.qcom.sh:root/init.qcom.sh \
+     $(LOCAL_PATH)/configs/init.target.rc:root/init.target.rc \
+     $(LOCAL_PATH)/configs/ueventd.qcom.rc:root/ueventd.qcom.rc
+
+# USB function switching
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/init.qcom.usb.rc:root/init.qcom.usb.rc
+
+# Qcom scripts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init.crda.sh:system/etc/init.crda.sh \
+    $(LOCAL_PATH)/configs/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
+    $(LOCAL_PATH)/configs/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
+    $(LOCAL_PATH)/configs/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
+    $(LOCAL_PATH)/configs/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
+
+# Key layouts and touchscreen
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
+     $(LOCAL_PATH)/configs/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+     $(LOCAL_PATH)/configs/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
+     $(LOCAL_PATH)/configs/zte_cap_touchscreen.idc:system/usr/idc/zte_cap_touchscreen.idc
+
+# Audio Policy Config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bcm4339.hcd:system/vendor/firmware/bcm4339.hcd \
@@ -25,8 +89,234 @@ PRODUCT_COPY_FILES += \
      
 # Thermald
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/thermald/thermal-engine.conf:system/etc/thermal-engine-8974.conf \
-    $(LOCAL_PATH)/thermald/thermal-engine.conf:system/etc/thermal-engine.conf
+    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine-8974.conf \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+
+# GPS configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf \
+    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+
+# Spn config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
+
+# Apn config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+
+# Wifi        
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/nvram.txt:system/etc/wifi/nvram.txt
+
+# Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    e2fsck
+
+# Audio
+PRODUCT_PACKAGES += \
+    audio_policy.msm8974 \
+    audio.primary.msm8974 \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    libaudio-resampler \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    audiod \
+    tinymix
+
+# Display
+PRODUCT_PACKAGES += \
+    libgenlock \
+    liboverlay \
+    libmemalloc \
+    libqdutils \
+    hwcomposer.msm8974 \
+    gralloc.msm8974 \
+    copybit.msm8974 \
+    memtrack.msm8974 \
+
+# IR packages
+PRODUCT_PACKAGES += \
+    consumerir.msm8974
+
+# Omx
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libc2dcolorconvert \
+    libOmxVdecHevc \
+    libdashplayer \
+    libdivxdrmdecrypt \
+    libmm-omxcore \
+    libstagefrighthw \
+    libtilerenderer \
+    libI420colorconvert
+
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8974
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8974
+
+# GPS	
+PRODUCT_PACKAGES += \
+    gps.msm8974 \
+    libgps.utils \
+    libloc_adapter \
+    libloc_eng \
+
+# NFC packages
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras \
+    nfc.default
+
+# USB packages
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
+
+# Qualcomm Random Numbers Generator
+PRODUCT_PACKAGES += \
+    qrngd \
+    qrngp
+
+PRODUCT_PACKAGES += \
+    libemoji \
+    libion
+
+# libxml2 is needed for camera
+PRODUCT_PACKAGES += \
+    libxml2
+
+# Network
+PRODUCT_PACKAGES += \
+    libnetcmdiface \
+    libnl_2
+
+# Wifi direct
+PRODUCT_PACKAGES += \
+    crda \
+    regdbdump \
+    regulatory.bin \
+    linville.key.pub.pem
+
+# Hostapd
+PRODUCT_PACKAGES += \
+    hostapd_cli \
+    hostapd
+
+# Extended media support
+PRODUCT_PACKAGES += \
+    qcmediaplayer
+
+PRODUCT_BOOT_JARS += \
+    qcmediaplayer
+
+# for off charging mode
+PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images
+
+# QC Perf
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=15 \
+    ro.sys.umsdirtyratio=20
+
+# Set default USB interface
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mass_storage,adb
+
+# GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.gps.qc_nlp_in_use=0
+
+# WFD
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
+
+# Time
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true
+
+# VIDC debug_levels
+# 1:ERROR 2:HIGH 4:LOW 0:NOLOGS 7:AllLOGS
+PRODUCT_PROPERTY_OVERRIDES += \
+    vidc.debug.level=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.chipname=msm8974 \
+    ro.sf.lcd_density=480 \
+    ro.opengles.version=196608
+
+# Audio Configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.handset.mic.type=digital \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.dualmic.config=endfire \
+    persist.audio.fluence.voicerec=true \
+    persist.audio.fluence.speaker=false \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.resampler.quality=4 \
+    audio.offload.buffer.size.kb=32 \
+    audio.offload.gapless.enabled=false \
+    av.offload.enable=true
+    
+# Do not power down SIM card when modem is sent to Low Power Mode.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1
+
+# Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.call_ring.multiple=0
+	
+# Prefer SPN over PLMN name in nw scan response.
+# This avoids different names to be displayed to the user for same PLMN.
+# RIL uses this property.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.prefer_spn=2
+    
+# update 1x signal strength after 2s
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.radio.snapshot_enabled=1 \
+    persist.radio.snapshot_timer=2
+    
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.radio.use_cc_names=true
+
+#Upto 3 layers can go through overlays
+PRODUCT_PROPERTY_OVERRIDES += \
+    com.qc.hardware=true \
+    debug.sf.hw=1 \
+    debug.egl.hw=1 \
+    persist.hwc.mdpcomp.enable=true \
+    debug.mdpcomp.logs=0
 
 # Recovery Options
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -39,10 +329,15 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 DEVICE_PACKAGE_OVERLAYS += device/zte/nx503a/overlay
 
+PRODUCT_TAGS += dalvik.gc.type-precise
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-# Inherit from msm8974-common
-$(call inherit-product, device/zte/msm8974-common/msm8974.mk)
+# call dalvik heap config
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+
+# Wifi bcm4339
+$(call inherit-product, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
 
 # Inherit from vendor files
 $(call inherit-product, vendor/zte/nx503a/nx503a-vendor.mk)
