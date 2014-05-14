@@ -12,9 +12,6 @@ Getting Started :
 		mkdir -p device/zte/nx503a
 		git clone https://github.com/XMelancholy/android_device_zte_nx503a.git -b cm-11.0 device/zte/nx503a
 
-		mkdir -p device/zte/msm8974-common
-		git clone https://github.com/XMelancholy/android_device_zte_msm8974-common.git -b cm-11.0 device/zte/msm8974-common
-
 		mkdir -p device/qcom/common
 		git clone https://github.com/CyanogenMod/android_device_qcom_common.git -b cm-11.0 device/qcom/common
 
