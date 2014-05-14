@@ -250,10 +250,7 @@ PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
-# QC Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
-
+# Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=15 \
@@ -263,18 +260,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mass_storage,adb
 
-# GPS
+# Opengles 3
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.gps.qc_nlp_in_use=0
+    ro.opengles.version=196608
 
-# WFD
+# Drm service
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
+    drm.service.enabled=true
 
-# Time
+# Lcd
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true
+    ro.sf.lcd_density=480
+
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=ZTEQualcommUiccRIL \
+    ro.telephony.ril.v3=qcomdsds
 
 # VIDC debug_levels
 # 1:ERROR 2:HIGH 4:LOW 0:NOLOGS 7:AllLOGS
@@ -283,8 +284,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.chipname=msm8974 \
-    ro.sf.lcd_density=480 \
-    ro.opengles.version=196608
 
 # Audio Configuration
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -307,7 +306,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0
-	
+
 # Prefer SPN over PLMN name in nw scan response.
 # This avoids different names to be displayed to the user for same PLMN.
 # RIL uses this property.
@@ -325,10 +324,23 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 #Upto 3 layers can go through overlays
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
-    debug.sf.hw=1 \
-    debug.egl.hw=1 \
-    persist.hwc.mdpcomp.enable=true \
-    debug.mdpcomp.logs=0
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.enable.dtm=0 \
+    ro.ril.transmitpower=true \
+    ril.data.bootingpopup=0 \
+    persist.radio.mode_pref_nv10=1 \
+    persist.radio.adb_log_on=1 \
+    persist.radio.add_power_save=1 \
+    persist.radio.snapshot_disabled=1 \
+    persist.radio.use_se_table_only=1 \
+    persist.radio.fill_eons=1 \
+    persist.radio.kickstart=on \
+    persist.radio.tdscdma_present=2 \
+    persist.sys.strictmode.disable=true \
+    persist.telephony.oosisdc=false \
+    ro.config.vc_call_vol_steps=4 \
+    debug.sensors=1
 
 # Recovery Options
 PRODUCT_PROPERTY_OVERRIDES += \

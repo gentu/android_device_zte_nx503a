@@ -646,11 +646,11 @@ service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
 #    group net_admin wifi inet gps
 #    disabled
 
-service lowi-server /system/bin/lowi-server
-    class late_start
-    user gps
-    group gps net_admin wifi inet qcom_diag
-    disabled
+#service lowi-server /system/bin/lowi-server
+#    class late_start
+#    user gps
+#    group gps net_admin wifi inet qcom_diag
+#    disabled
 
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     class late_start
