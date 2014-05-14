@@ -135,7 +135,7 @@ TARGET_FORCE_CPU_UPLOAD := true
 BOARD_HAVE_NFC := true
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/zte/nx503a/ril/
+BOARD_RIL_CLASS := ../../../device/zte/nx503a/telephony-common/
 
 # Init
 TARGET_NO_INITLOGO := true
