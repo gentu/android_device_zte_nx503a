@@ -76,7 +76,7 @@ TARGET_QCOM_MEDIA_VARIANT := caf-new
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Graphics
-BOARD_EGL_CFG := device/zte/msm8974-common/configs/egl.cfg
+BOARD_EGL_CFG := device/zte/nx503a/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 TARGET_USES_ION := true
@@ -178,7 +178,7 @@ BOARD_RECOVERY_HANDLES_MOUNT := true
 BOARD_USES_MMCUTILS := true
 BOARD_RECOVERY_SWIPE := true
 RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := device/zte/nx503a/ramdisk/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/zte/nx503a/configs/fstab.qcom
 TARGET_RECOVERY_INITRC := device/zte/nx503a/recovery/init.rc
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
