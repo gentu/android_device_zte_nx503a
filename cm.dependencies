@@ -10,11 +10,5 @@
  {
    "repository": "android_device_qcom_common",
    "target_path": "device/qcom/common"
- },
- {
-   "remote": "github",
-   "repository": "XMelancholy/android_kernel_zte_nx503a",
-   "target_path": "kernel/zte/NX503A"
-   "revision": "cm-11.0"
- },
+ }
 ]
