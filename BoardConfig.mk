@@ -28,6 +28,7 @@ TARGET_CPU_VARIANT := krait
 ARCH_ARM_HAVE_ARMV7A := true
 ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_VFP := true
 
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
