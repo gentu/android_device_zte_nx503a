@@ -11,3 +11,8 @@ PRODUCT_NAME := full_NX503A
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := Z5S
 PRODUCT_MANUFACTURER := zte
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.product.locale.language=ru \
+    ro.product.locale.region=RU \
+    persist.sys.timezone=Europe/Moscow \
