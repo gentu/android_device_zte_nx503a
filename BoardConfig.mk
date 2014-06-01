@@ -80,7 +80,7 @@ TARGET_QCOM_AUDIO_VARIANT := caf
 TARGET_QCOM_DISPLAY_VARIANT := caf-new
 TARGET_QCOM_MEDIA_VARIANT := caf-new
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-#WITH_QC_PERF := true
+WITH_QC_PERF := true
 
 # Graphics
 BOARD_EGL_CFG := device/zte/nx503a/configs/egl.cfg
