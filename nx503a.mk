@@ -24,11 +24,11 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
+    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
 # IR
 PRODUCT_COPY_FILES += \
@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
 # GSM and CDMA
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -90,7 +90,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bcm4339.hcd:system/vendor/firmware/bcm4339.hcd \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
-     
+
 # Thermald
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf \
@@ -140,7 +140,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8974 \
     gralloc.msm8974 \
     copybit.msm8974 \
-    memtrack.msm8974 \
+    memtrack.msm8974
 
 # IR packages
 PRODUCT_PACKAGES += \
@@ -172,12 +172,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.msm8974
 
-# GPS	
+# GPS
 PRODUCT_PACKAGES += \
     gps.msm8974 \
     libgps.utils \
     libloc_adapter \
-    libloc_eng \
+    libloc_eng
 
 # NFC packages
 PRODUCT_PACKAGES += \
@@ -275,7 +275,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.debug.level=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.chipname=msm8974 \
+    ro.chipname=msm8974
 
 # Audio Configuration
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -283,14 +283,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicecall=true \
     persist.audio.dualmic.config=endfire \
     persist.audio.fluence.voicerec=true \
-    persist.audio.fluence.speaker=false \
+    persist.audio.fluence.speaker=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
     af.resampler.quality=4 \
     audio.offload.buffer.size.kb=32 \
     audio.offload.gapless.enabled=false \
     av.offload.enable=true
-    
+
 # Do not power down SIM card when modem is sent to Low Power Mode.
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1
@@ -304,18 +304,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # RIL uses this property.
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.prefer_spn=2
-    
+
 # update 1x signal strength after 2s
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
     persist.radio.snapshot_timer=2
-    
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.use_cc_names=true
 
 #Upto 3 layers can go through overlays
 PRODUCT_PROPERTY_OVERRIDES += \
-    com.qc.hardware=true \
+    com.qc.hardware=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.dtm=0 \
