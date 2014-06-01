@@ -12,7 +12,8 @@ PRODUCT_BRAND := nubia
 PRODUCT_MODEL := Z5S
 PRODUCT_MANUFACTURER := zte
 
+PRODUCT_DEFAULT_LANGUAGE := ru
+PRODUCT_DEFAULT_REGION := RU
+
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.product.locale.language=ru \
-    ro.product.locale.region=RU \
-    persist.sys.timezone=Europe/Moscow \
+    persist.sys.timezone=Europe/Moscow
