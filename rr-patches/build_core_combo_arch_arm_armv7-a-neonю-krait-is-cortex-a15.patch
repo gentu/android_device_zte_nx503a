@@ -1,15 +1,3 @@
-diff --git a/build/core/Makefile b/build/core/Makefile
-index 0e815fd..991465d 100644
---- a/build/core/Makefile
-+++ b/build/core/Makefile
-@@ -1465,7 +1465,6 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
- 	   -k $(KEY_CERT_PAIR) \
- 	   --backup=$(backuptool) \
- 	   --override_device=$(override_device) \
--	   --override_prop=$(override_prop) \
- 	   $(BUILT_TARGET_FILES_PACKAGE) $@
- 
- CM_TARGET_PACKAGE := $(PRODUCT_OUT)/rr-$(CM_VERSION).zip
 diff --git a/build/core/combo/arch/arm/armv7-a-neon.mk b/build/core/combo/arch/arm/armv7-a-neon.mk
 index 398d0e8..a4380f1 100644
 --- a/build/core/combo/arch/arm/armv7-a-neon.mk
