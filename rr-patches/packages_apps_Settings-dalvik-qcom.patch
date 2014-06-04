@@ -1,0 +1,1314 @@
+diff --git a/packages/apps/Settings/res/values-af/arrays.xml b/packages/apps/Settings/res/values-af/arrays.xml
+index 22c51b8..48422d6 100644
+--- a/packages/apps/Settings/res/values-af/arrays.xml
++++ b/packages/apps/Settings/res/values-af/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (ontfout)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Gebruik Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Gebruik ART"</item>
+     <item msgid="4530003713865319928">"Gebruik ART-ontfoutbou"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-am/arrays.xml b/packages/apps/Settings/res/values-am/arrays.xml
+index 238fcb5..14597e8 100644
+--- a/packages/apps/Settings/res/values-am/arrays.xml
++++ b/packages/apps/Settings/res/values-am/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (ስህተት አርም)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik ይጠቀሙ"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART ይጠቀሙ"</item>
+     <item msgid="4530003713865319928">"ART ስህተት የማረም ግንባታ ይጠቀሙ"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ar/arrays.xml b/packages/apps/Settings/res/values-ar/arrays.xml
+index d40080c..b4a9542 100644
+--- a/packages/apps/Settings/res/values-ar/arrays.xml
++++ b/packages/apps/Settings/res/values-ar/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"‏ART (تصحيح الأخطاء)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"‏استخدام Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"‏استخدام ART"</item>
+     <item msgid="4530003713865319928">"‏استخدام إصدار تصحيح الأخطاء من ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-az-rAZ/arrays.xml b/packages/apps/Settings/res/values-az-rAZ/arrays.xml
+index edceaeb..f54e002 100644
+--- a/packages/apps/Settings/res/values-az-rAZ/arrays.xml
++++ b/packages/apps/Settings/res/values-az-rAZ/arrays.xml
+@@ -324,11 +324,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (sazlama)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik istifadə edin"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART istifadə edin"</item>
+     <item msgid="4530003713865319928">"ART sazlama tərtibatından istifadə edin"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-az/arrays.xml b/packages/apps/Settings/res/values-az/arrays.xml
+index 99264a8..7e78c38 100644
+--- a/packages/apps/Settings/res/values-az/arrays.xml
++++ b/packages/apps/Settings/res/values-az/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (sazlama)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik istifadə edin"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART istifadə edin"</item>
+     <item msgid="4530003713865319928">"ART sazlama tərtibatından istifadə edin"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-be/arrays.xml b/packages/apps/Settings/res/values-be/arrays.xml
+index 36b95b9..e02f071 100644
+--- a/packages/apps/Settings/res/values-be/arrays.xml
++++ b/packages/apps/Settings/res/values-be/arrays.xml
+@@ -272,11 +272,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:3 (2985943780939258562) -->
+     <!-- no translation found for captioning_preset_selector_titles:4 (7520438652121629055) -->
+     <!-- no translation found for select_runtime_titles:0 (3574453009229338122) -->
+-    <!-- no translation found for select_runtime_titles:1 (8978402910750533864) -->
+-    <!-- no translation found for select_runtime_titles:2 (7839859333977894115) -->
++    <!-- no translation found for select_runtime_titles:1 (3574453009229338123) -->
++    <!-- no translation found for select_runtime_titles:2 (8978402910750533864) -->
++    <!-- no translation found for select_runtime_titles:3 (7839859333977894115) -->
+     <!-- no translation found for select_runtime_summaries:0 (6412880178297884701) -->
+-    <!-- no translation found for select_runtime_summaries:1 (5131846588686178907) -->
+-    <!-- no translation found for select_runtime_summaries:2 (4530003713865319928) -->
++    <!-- no translation found for select_runtime_summaries:1 (6412880178297884702) -->
++    <!-- no translation found for select_runtime_summaries:2 (5131846588686178907) -->
++    <!-- no translation found for select_runtime_summaries:3 (4530003713865319928) -->
+   <string-array name="hdcp_checking_titles">
+     <item msgid="441827799230089869">"Ніколі не правяраць"</item>
+     <item msgid="6042769699089883931">"Праверка толькi для змесціва, абароненага DRM"</item>
+diff --git a/packages/apps/Settings/res/values-bg/arrays.xml b/packages/apps/Settings/res/values-bg/arrays.xml
+index 92eee7e..a156b74 100644
+--- a/packages/apps/Settings/res/values-bg/arrays.xml
++++ b/packages/apps/Settings/res/values-bg/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (отстраняване на грешки)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Използване на Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Използване на ART"</item>
+     <item msgid="4530003713865319928">"Използване на версията на ART за отстраняване на грешки"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ca/arrays.xml b/packages/apps/Settings/res/values-ca/arrays.xml
+index c134ecd..1912d93 100644
+--- a/packages/apps/Settings/res/values-ca/arrays.xml
++++ b/packages/apps/Settings/res/values-ca/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (depuració)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Fes servir Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Fes servir ART"</item>
+     <item msgid="4530003713865319928">"Fes servir la compilació de depuració ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-cs/arrays.xml b/packages/apps/Settings/res/values-cs/arrays.xml
+index b4a1d81..5e34621 100644
+--- a/packages/apps/Settings/res/values-cs/arrays.xml
++++ b/packages/apps/Settings/res/values-cs/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (režim ladění)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Použít program Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Použít program ART"</item>
+     <item msgid="4530003713865319928">"Použít ladicí sestavení programu ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-da/arrays.xml b/packages/apps/Settings/res/values-da/arrays.xml
+index 5ae9c61..7a87b1a 100644
+--- a/packages/apps/Settings/res/values-da/arrays.xml
++++ b/packages/apps/Settings/res/values-da/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (debug)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Brug Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Brug ART"</item>
+     <item msgid="4530003713865319928">"Brug ART debug build"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-de/arrays.xml b/packages/apps/Settings/res/values-de/arrays.xml
+index ef4e701..c314458 100644
+--- a/packages/apps/Settings/res/values-de/arrays.xml
++++ b/packages/apps/Settings/res/values-de/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (Debug)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik verwenden"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART verwenden"</item>
+     <item msgid="4530003713865319928">"ART-Debug-Build verwenden"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-el/arrays.xml b/packages/apps/Settings/res/values-el/arrays.xml
+index 4bebbfe..947f3f3 100644
+--- a/packages/apps/Settings/res/values-el/arrays.xml
++++ b/packages/apps/Settings/res/values-el/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (εντοπισμός σφαλμάτων)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Χρήση Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Χρήση ART"</item>
+     <item msgid="4530003713865319928">"Χρήση της έκδοσης εντοπισμού σφαλμάτων ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-en-rGB/arrays.xml b/packages/apps/Settings/res/values-en-rGB/arrays.xml
+index 7475be0..18c1391 100644
+--- a/packages/apps/Settings/res/values-en-rGB/arrays.xml
++++ b/packages/apps/Settings/res/values-en-rGB/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (debug)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Use Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Use ART"</item>
+     <item msgid="4530003713865319928">"Use ART debug build"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-en-rIN/arrays.xml b/packages/apps/Settings/res/values-en-rIN/arrays.xml
+index 7475be0..18c1391 100644
+--- a/packages/apps/Settings/res/values-en-rIN/arrays.xml
++++ b/packages/apps/Settings/res/values-en-rIN/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (debug)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Use Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Use ART"</item>
+     <item msgid="4530003713865319928">"Use ART debug build"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-es-rUS/arrays.xml b/packages/apps/Settings/res/values-es-rUS/arrays.xml
+index a4c312f..086c33a 100644
+--- a/packages/apps/Settings/res/values-es-rUS/arrays.xml
++++ b/packages/apps/Settings/res/values-es-rUS/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (depuración)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Usar Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Usar ART"</item>
+     <item msgid="4530003713865319928">"Usar compilación de depuración de ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-es-rXA/arrays.xml b/packages/apps/Settings/res/values-es-rXA/arrays.xml
+index 098f2ed..563d01b 100644
+--- a/packages/apps/Settings/res/values-es-rXA/arrays.xml
++++ b/packages/apps/Settings/res/values-es-rXA/arrays.xml
+@@ -360,11 +360,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">Dalvik</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">ART</item>
+     <item msgid="7839859333977894115">ART (depuración)</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">Usar Dalvik</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">Usar ART</item>
+     <item msgid="4530003713865319928">Usar compilación de depuración d\'ART</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-es/arrays.xml b/packages/apps/Settings/res/values-es/arrays.xml
+index 6186caa..c4e0385 100644
+--- a/packages/apps/Settings/res/values-es/arrays.xml
++++ b/packages/apps/Settings/res/values-es/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (depuración)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Usar Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Usar ART"</item>
+     <item msgid="4530003713865319928">"Usar compilación de depuración de ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-et-rEE/arrays.xml b/packages/apps/Settings/res/values-et-rEE/arrays.xml
+index b283890..81372b6 100644
+--- a/packages/apps/Settings/res/values-et-rEE/arrays.xml
++++ b/packages/apps/Settings/res/values-et-rEE/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (silumine)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Kasuta tarkvara Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Kasuta valikut ART"</item>
+     <item msgid="4530003713865319928">"Kasuta valiku ART silumisjärku"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-et/arrays.xml b/packages/apps/Settings/res/values-et/arrays.xml
+index 5c3e462..8097e31 100644
+--- a/packages/apps/Settings/res/values-et/arrays.xml
++++ b/packages/apps/Settings/res/values-et/arrays.xml
+@@ -360,11 +360,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:1 (4589278788192525675) -->
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (silumine)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Kasuta tarkvara Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Kasuta valikut ART"</item>
+     <item msgid="4530003713865319928">"Kasuta valiku ART silumisjärku"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-fa/arrays.xml b/packages/apps/Settings/res/values-fa/arrays.xml
+index a4556cf..feb8d6c 100644
+--- a/packages/apps/Settings/res/values-fa/arrays.xml
++++ b/packages/apps/Settings/res/values-fa/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"‏‫ART (اشکال‌زدایی)‏"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"‏استفاده از Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"‏استفاده از ART"</item>
+     <item msgid="4530003713865319928">"‏استفاده از نسخه اشکال‌زدایی ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-fi/arrays.xml b/packages/apps/Settings/res/values-fi/arrays.xml
+index 44be5eb..b719696 100644
+--- a/packages/apps/Settings/res/values-fi/arrays.xml
++++ b/packages/apps/Settings/res/values-fi/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (virheenkorjaus)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Käytä Dalvik-ympäristöä"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Käytä ART-ympäristöä"</item>
+     <item msgid="4530003713865319928">"Käytä ART-virheenkorjauskoontiversiota"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-fr-rCA/arrays.xml b/packages/apps/Settings/res/values-fr-rCA/arrays.xml
+index e695dff..5f36168 100644
+--- a/packages/apps/Settings/res/values-fr-rCA/arrays.xml
++++ b/packages/apps/Settings/res/values-fr-rCA/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (débogage)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Utiliser Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Utiliser ART"</item>
+     <item msgid="4530003713865319928">"Utiliser la version de débogage ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-fr/arrays.xml b/packages/apps/Settings/res/values-fr/arrays.xml
+index 065e661..895c7f9 100644
+--- a/packages/apps/Settings/res/values-fr/arrays.xml
++++ b/packages/apps/Settings/res/values-fr/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (débogage)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Utiliser Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Utiliser ART"</item>
+     <item msgid="4530003713865319928">"Utiliser le build de débogage ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-hi/arrays.xml b/packages/apps/Settings/res/values-hi/arrays.xml
+index 03b32fd..91ed322 100644
+--- a/packages/apps/Settings/res/values-hi/arrays.xml
++++ b/packages/apps/Settings/res/values-hi/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (डीबग)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik का उपयोग करें"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART का उपयोग करें"</item>
+     <item msgid="4530003713865319928">"ART डीबग बिल्ड का उपयोग करें"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-hr/arrays.xml b/packages/apps/Settings/res/values-hr/arrays.xml
+index 2574992..c029492 100644
+--- a/packages/apps/Settings/res/values-hr/arrays.xml
++++ b/packages/apps/Settings/res/values-hr/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (uklanjanje program. pogrešaka)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Upotrijebi Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Upotrijebi ART"</item>
+     <item msgid="4530003713865319928">"Upotrijebi verziju ART-a za uklanjanje programskih pogrešaka"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-hu/arrays.xml b/packages/apps/Settings/res/values-hu/arrays.xml
+index fcb5867..c3badfd 100644
+--- a/packages/apps/Settings/res/values-hu/arrays.xml
++++ b/packages/apps/Settings/res/values-hu/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (hibakeresési)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"A Dalvik használata"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Az ART használata"</item>
+     <item msgid="4530003713865319928">"Az ART hibakeresési verziójának használata"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-hy-rAM/arrays.xml b/packages/apps/Settings/res/values-hy-rAM/arrays.xml
+index 71b4cf8..19d9dcf 100644
+--- a/packages/apps/Settings/res/values-hy-rAM/arrays.xml
++++ b/packages/apps/Settings/res/values-hy-rAM/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (վրիպազերծում)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Օգտագործել Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Օգտագործել ART"</item>
+     <item msgid="4530003713865319928">"Օգտագործել ART վրիպազերծման ծրագրատարբերակը"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-hy/arrays.xml b/packages/apps/Settings/res/values-hy/arrays.xml
+index cb3038f..f98fa10 100644
+--- a/packages/apps/Settings/res/values-hy/arrays.xml
++++ b/packages/apps/Settings/res/values-hy/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (վրիպազերծում)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Օգտագործել Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Օգտագործել ART"</item>
+     <item msgid="4530003713865319928">"Օգտագործել ART վրիպազերծման ծրագրատարբերակը"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-in/arrays.xml b/packages/apps/Settings/res/values-in/arrays.xml
+index 0364905..87b873d 100644
+--- a/packages/apps/Settings/res/values-in/arrays.xml
++++ b/packages/apps/Settings/res/values-in/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (debug)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Gunakan Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Gunakan ART"</item>
+     <item msgid="4530003713865319928">"Gunakan bentukan debug ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-it/arrays.xml b/packages/apps/Settings/res/values-it/arrays.xml
+index 9af5346..f23c75f 100644
+--- a/packages/apps/Settings/res/values-it/arrays.xml
++++ b/packages/apps/Settings/res/values-it/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (debug)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Usa Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Usa ART"</item>
+     <item msgid="4530003713865319928">"Usa la build di debug ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-iw/arrays.xml b/packages/apps/Settings/res/values-iw/arrays.xml
+index c370702..5586149 100644
+--- a/packages/apps/Settings/res/values-iw/arrays.xml
++++ b/packages/apps/Settings/res/values-iw/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"‏ART (ניקוי באגים)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"‏השתמש ב-Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"‏השתמש ב-ART"</item>
+     <item msgid="4530003713865319928">"‏השתמש ב-Build ניקוי הבאגים של ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ja/arrays.xml b/packages/apps/Settings/res/values-ja/arrays.xml
+index a0122d2..baac227 100644
+--- a/packages/apps/Settings/res/values-ja/arrays.xml
++++ b/packages/apps/Settings/res/values-ja/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART（デバッグ）"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvikを使用"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ARTを使用"</item>
+     <item msgid="4530003713865319928">"ARTデバッグビルドを使用"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ka-rGE/arrays.xml b/packages/apps/Settings/res/values-ka-rGE/arrays.xml
+index ec6cd80..d6f33d4 100644
+--- a/packages/apps/Settings/res/values-ka-rGE/arrays.xml
++++ b/packages/apps/Settings/res/values-ka-rGE/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (გამართვა)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik-ის გამოყენება"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART-ის გამოყენება"</item>
+     <item msgid="4530003713865319928">"ART გამართვის ანაწყობის გამოყენება"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ka/arrays.xml b/packages/apps/Settings/res/values-ka/arrays.xml
+index a950e83..2194974 100644
+--- a/packages/apps/Settings/res/values-ka/arrays.xml
++++ b/packages/apps/Settings/res/values-ka/arrays.xml
+@@ -360,11 +360,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:1 (4589278788192525675) -->
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (გამართვა)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik-ის გამოყენება"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART-ის გამოყენება"</item>
+     <item msgid="4530003713865319928">"ART გამართვის ანაწყობის გამოყენება"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-km-rKH/arrays.xml b/packages/apps/Settings/res/values-km-rKH/arrays.xml
+index 9573015..a910a41 100644
+--- a/packages/apps/Settings/res/values-km-rKH/arrays.xml
++++ b/packages/apps/Settings/res/values-km-rKH/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (កែ​កំហុស)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"ប្រើ Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ប្រើ ART"</item>
+     <item msgid="4530003713865319928">"ប្រើ​ការ​បង្កើត​កែ​កំហុស ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-km/arrays.xml b/packages/apps/Settings/res/values-km/arrays.xml
+index 9396fa0..85bb5cf 100644
+--- a/packages/apps/Settings/res/values-km/arrays.xml
++++ b/packages/apps/Settings/res/values-km/arrays.xml
+@@ -360,11 +360,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:1 (4589278788192525675) -->
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (កែ​កំហុស)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"ប្រើ Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ប្រើ ART"</item>
+     <item msgid="4530003713865319928">"ប្រើ​ការ​បង្កើត​កែ​កំហុស ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ko/arrays.xml b/packages/apps/Settings/res/values-ko/arrays.xml
+index a7d9715..f7c0d33 100644
+--- a/packages/apps/Settings/res/values-ko/arrays.xml
++++ b/packages/apps/Settings/res/values-ko/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART(디버그)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik 사용"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART 사용"</item>
+     <item msgid="4530003713865319928">"ART 디버그 빌드 사용"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-lo-rLA/arrays.xml b/packages/apps/Settings/res/values-lo-rLA/arrays.xml
+index dbe1724..9ec993b 100644
+--- a/packages/apps/Settings/res/values-lo-rLA/arrays.xml
++++ b/packages/apps/Settings/res/values-lo-rLA/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (ແກ້ບັນຫາ​)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"ນໍາ​ໃຊ້ Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"​ນໍາ​ໃຊ້​ ART"</item>
+     <item msgid="4530003713865319928">"​ໃຊ້​ໂຕແກ້ບັນຫາ ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-lo/arrays.xml b/packages/apps/Settings/res/values-lo/arrays.xml
+index 5565bce..4f8d555 100644
+--- a/packages/apps/Settings/res/values-lo/arrays.xml
++++ b/packages/apps/Settings/res/values-lo/arrays.xml
+@@ -360,11 +360,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:1 (4589278788192525675) -->
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (ແກ້ບັນຫາ​)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"ນໍາ​ໃຊ້ Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"​ນໍາ​ໃຊ້​ ART"</item>
+     <item msgid="4530003713865319928">"​ໃຊ້​ໂຕແກ້ບັນຫາ ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-lt/arrays.xml b/packages/apps/Settings/res/values-lt/arrays.xml
+index 5894da4..c58a843 100644
+--- a/packages/apps/Settings/res/values-lt/arrays.xml
++++ b/packages/apps/Settings/res/values-lt/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (derinimas)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Naudoti „Dalvik“"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Naudoti ART"</item>
+     <item msgid="4530003713865319928">"Naudoti ART derinimo versiją"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-lv/arrays.xml b/packages/apps/Settings/res/values-lv/arrays.xml
+index a25f2bb..1ee8d0a 100644
+--- a/packages/apps/Settings/res/values-lv/arrays.xml
++++ b/packages/apps/Settings/res/values-lv/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (atkļūdošana)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Izmantot Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Izmantot ART"</item>
+     <item msgid="4530003713865319928">"Izmantot ART atkļūdošanas versiju"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-mn-rMN/arrays.xml b/packages/apps/Settings/res/values-mn-rMN/arrays.xml
+index 9b9f17e..7d38d2b 100644
+--- a/packages/apps/Settings/res/values-mn-rMN/arrays.xml
++++ b/packages/apps/Settings/res/values-mn-rMN/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (дебаг)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik ашиглах"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART ашиглах"</item>
+     <item msgid="4530003713865319928">"ART дебаг ашиглах"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-mn/arrays.xml b/packages/apps/Settings/res/values-mn/arrays.xml
+index d40f6f5..7f21807 100644
+--- a/packages/apps/Settings/res/values-mn/arrays.xml
++++ b/packages/apps/Settings/res/values-mn/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (дебаг)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik ашиглах"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART ашиглах"</item>
+     <item msgid="4530003713865319928">"ART дебаг ашиглах"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ms-rMY/arrays.xml b/packages/apps/Settings/res/values-ms-rMY/arrays.xml
+index 8958236..6570439 100644
+--- a/packages/apps/Settings/res/values-ms-rMY/arrays.xml
++++ b/packages/apps/Settings/res/values-ms-rMY/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (nyahpepijat)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Gunakan Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Gunakan ART"</item>
+     <item msgid="4530003713865319928">"Gunakan binaan nyahpepijat ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ms/arrays.xml b/packages/apps/Settings/res/values-ms/arrays.xml
+index de8f7ea..aa7c4ed 100644
+--- a/packages/apps/Settings/res/values-ms/arrays.xml
++++ b/packages/apps/Settings/res/values-ms/arrays.xml
+@@ -360,11 +360,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:1 (4589278788192525675) -->
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (nyahpepijat)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Gunakan Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Gunakan ART"</item>
+     <item msgid="4530003713865319928">"Gunakan binaan nyahpepijat ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-nb/arrays.xml b/packages/apps/Settings/res/values-nb/arrays.xml
+index b296d17..0084be3 100644
+--- a/packages/apps/Settings/res/values-nb/arrays.xml
++++ b/packages/apps/Settings/res/values-nb/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (feilsøking)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Bruk Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Bruk ART"</item>
+     <item msgid="4530003713865319928">"Bruk ART-delversjonen for feilsøking"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ne-rNP/arrays.xml b/packages/apps/Settings/res/values-ne-rNP/arrays.xml
+index 0022225..be50b25 100644
+--- a/packages/apps/Settings/res/values-ne-rNP/arrays.xml
++++ b/packages/apps/Settings/res/values-ne-rNP/arrays.xml
+@@ -324,11 +324,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (डिबग)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik को प्रयोग गर्नुहोस्"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART प्रयोग गर्नुहोस्"</item>
+     <item msgid="4530003713865319928">"ART debug build प्रयोग गर्नुहोस्"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ne/arrays.xml b/packages/apps/Settings/res/values-ne/arrays.xml
+index bb40220..0009273 100644
+--- a/packages/apps/Settings/res/values-ne/arrays.xml
++++ b/packages/apps/Settings/res/values-ne/arrays.xml
+@@ -360,11 +360,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:1 (4589278788192525675) -->
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (डिबग)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik को प्रयोग गर्नुहोस्"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART प्रयोग गर्नुहोस्"</item>
+     <item msgid="4530003713865319928">"ART debug build प्रयोग गर्नुहोस्"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-nl/arrays.xml b/packages/apps/Settings/res/values-nl/arrays.xml
+index d0dac99..15d821f 100644
+--- a/packages/apps/Settings/res/values-nl/arrays.xml
++++ b/packages/apps/Settings/res/values-nl/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (foutopsporing)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik gebruiken"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART gebruiken"</item>
+     <item msgid="4530003713865319928">"ART-foutopsporingsbuild gebruiken"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-pl/arrays.xml b/packages/apps/Settings/res/values-pl/arrays.xml
+index 58c3c65..b9f813b 100644
+--- a/packages/apps/Settings/res/values-pl/arrays.xml
++++ b/packages/apps/Settings/res/values-pl/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (debugowanie)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Użyj Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Użyj ART"</item>
+     <item msgid="4530003713865319928">"Użyj komplikacji debugowania ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-pt-rPT/arrays.xml b/packages/apps/Settings/res/values-pt-rPT/arrays.xml
+index 93b041a..3fa0788 100644
+--- a/packages/apps/Settings/res/values-pt-rPT/arrays.xml
++++ b/packages/apps/Settings/res/values-pt-rPT/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (depurar)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Utilizar Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Utilizar ART"</item>
+     <item msgid="4530003713865319928">"Utilizar compilação de depuração ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-pt/arrays.xml b/packages/apps/Settings/res/values-pt/arrays.xml
+index ab6cfa6..e609d85 100644
+--- a/packages/apps/Settings/res/values-pt/arrays.xml
++++ b/packages/apps/Settings/res/values-pt/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (depuração)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Usar Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Usar ART"</item>
+     <item msgid="4530003713865319928">"Usar compilação de depuração do ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-rm/arrays.xml b/packages/apps/Settings/res/values-rm/arrays.xml
+index ac69811..30bf5db 100644
+--- a/packages/apps/Settings/res/values-rm/arrays.xml
++++ b/packages/apps/Settings/res/values-rm/arrays.xml
+@@ -272,11 +272,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:3 (2985943780939258562) -->
+     <!-- no translation found for captioning_preset_selector_titles:4 (7520438652121629055) -->
+     <!-- no translation found for select_runtime_titles:0 (3574453009229338122) -->
+-    <!-- no translation found for select_runtime_titles:1 (8978402910750533864) -->
+-    <!-- no translation found for select_runtime_titles:2 (7839859333977894115) -->
++    <!-- no translation found for select_runtime_titles:1 (3574453009229338123) -->
++    <!-- no translation found for select_runtime_titles:2 (8978402910750533864) -->
++    <!-- no translation found for select_runtime_titles:3 (7839859333977894115) -->
+     <!-- no translation found for select_runtime_summaries:0 (6412880178297884701) -->
+-    <!-- no translation found for select_runtime_summaries:1 (5131846588686178907) -->
+-    <!-- no translation found for select_runtime_summaries:2 (4530003713865319928) -->
++    <!-- no translation found for select_runtime_summaries:1 (6412880178297884702) -->
++    <!-- no translation found for select_runtime_summaries:2 (5131846588686178907) -->
++    <!-- no translation found for select_runtime_summaries:3 (4530003713865319928) -->
+     <!-- no translation found for hdcp_checking_titles:0 (441827799230089869) -->
+     <!-- no translation found for hdcp_checking_titles:1 (6042769699089883931) -->
+     <!-- no translation found for hdcp_checking_titles:2 (9174900380056846820) -->
+diff --git a/packages/apps/Settings/res/values-ro/arrays.xml b/packages/apps/Settings/res/values-ro/arrays.xml
+index 22d9b4e..24d753b 100644
+--- a/packages/apps/Settings/res/values-ro/arrays.xml
++++ b/packages/apps/Settings/res/values-ro/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (depanare)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Utilizați Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Utilizați ART"</item>
+     <item msgid="4530003713865319928">"Utilizați ART, versiunea de depanare"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-ru/arrays.xml b/packages/apps/Settings/res/values-ru/arrays.xml
+index 64c71cb..2cbc381 100644
+--- a/packages/apps/Settings/res/values-ru/arrays.xml
++++ b/packages/apps/Settings/res/values-ru/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (отладка)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Использовать Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Использовать ART"</item>
+     <item msgid="4530003713865319928">"Использовать отладочную версию ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-si-rLK/arrays.xml b/packages/apps/Settings/res/values-si-rLK/arrays.xml
+index 8283de0..364526b 100644
+--- a/packages/apps/Settings/res/values-si-rLK/arrays.xml
++++ b/packages/apps/Settings/res/values-si-rLK/arrays.xml
+@@ -324,11 +324,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (නිදොස් කිරීම)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik භාවිතා කරන්න"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART භාවිතා කරන්න"</item>
+     <item msgid="4530003713865319928">"ART නිදොස් කිරීමේ නිපැයුම භාවිතා කරන්න"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-si/arrays.xml b/packages/apps/Settings/res/values-si/arrays.xml
+index 9099e08..c968a2a 100644
+--- a/packages/apps/Settings/res/values-si/arrays.xml
++++ b/packages/apps/Settings/res/values-si/arrays.xml
+@@ -360,11 +360,13 @@
+     <!-- no translation found for captioning_preset_selector_titles:1 (4589278788192525675) -->
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (නිදොස් කිරීම)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik භාවිතා කරන්න"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART භාවිතා කරන්න"</item>
+     <item msgid="4530003713865319928">"ART නිදොස් කිරීමේ නිපැයුම භාවිතා කරන්න"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-sk/arrays.xml b/packages/apps/Settings/res/values-sk/arrays.xml
+index 2813659..eaf48a8 100644
+--- a/packages/apps/Settings/res/values-sk/arrays.xml
++++ b/packages/apps/Settings/res/values-sk/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (ladenie)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Použiť nástroj Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Použiť nástroj ART"</item>
+     <item msgid="4530003713865319928">"Použiť zostavu na ladenie programu ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-sl/arrays.xml b/packages/apps/Settings/res/values-sl/arrays.xml
+index d91c694..db9df4c 100644
+--- a/packages/apps/Settings/res/values-sl/arrays.xml
++++ b/packages/apps/Settings/res/values-sl/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (iskanje napak)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Uporabi Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Uporabi ART"</item>
+     <item msgid="4530003713865319928">"Uporabi različico za iskanje napak ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-sr/arrays.xml b/packages/apps/Settings/res/values-sr/arrays.xml
+index dd9b89f..5d30983 100644
+--- a/packages/apps/Settings/res/values-sr/arrays.xml
++++ b/packages/apps/Settings/res/values-sr/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (отклањање грешака)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Коришћење Dalvik-а"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Коришћење ART-а"</item>
+     <item msgid="4530003713865319928">"Коришћење ART верзије за отклањање грешака"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-sv/arrays.xml b/packages/apps/Settings/res/values-sv/arrays.xml
+index 1c80afb..9e03713 100644
+--- a/packages/apps/Settings/res/values-sv/arrays.xml
++++ b/packages/apps/Settings/res/values-sv/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (felsökning)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Använd Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Använd ART"</item>
+     <item msgid="4530003713865319928">"Använd felsökningsversionen av ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-sw/arrays.xml b/packages/apps/Settings/res/values-sw/arrays.xml
+index d25bf48..0e57d57 100644
+--- a/packages/apps/Settings/res/values-sw/arrays.xml
++++ b/packages/apps/Settings/res/values-sw/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (rekebisha hitilafu)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Tumia Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Tumia ART"</item>
+     <item msgid="4530003713865319928">"Tumia ART kurekebisha muundo"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-th/arrays.xml b/packages/apps/Settings/res/values-th/arrays.xml
+index 977bdef..ff8b21d 100644
+--- a/packages/apps/Settings/res/values-th/arrays.xml
++++ b/packages/apps/Settings/res/values-th/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (ดีบัก)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"ใช้ Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ใช้ ART"</item>
+     <item msgid="4530003713865319928">"ใช้บิวด์ดีบัก ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-tl/arrays.xml b/packages/apps/Settings/res/values-tl/arrays.xml
+index e8c127b..a3606cc 100644
+--- a/packages/apps/Settings/res/values-tl/arrays.xml
++++ b/packages/apps/Settings/res/values-tl/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (debug)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Gamitin ang Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Gamitin ang ART"</item>
+     <item msgid="4530003713865319928">"Gamitin ang build sa pag-debug ng ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-tr/arrays.xml b/packages/apps/Settings/res/values-tr/arrays.xml
+index 06654b5..7da7259 100644
+--- a/packages/apps/Settings/res/values-tr/arrays.xml
++++ b/packages/apps/Settings/res/values-tr/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (hata ayıklama)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Dalvik\'i kullan"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"ART\'yi kullan"</item>
+     <item msgid="4530003713865319928">"ART hata ayıklama derlemesini kullan"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-uk/arrays.xml b/packages/apps/Settings/res/values-uk/arrays.xml
+index 9566375..9f06626 100644
+--- a/packages/apps/Settings/res/values-uk/arrays.xml
++++ b/packages/apps/Settings/res/values-uk/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (налагодження)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Використовувати Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Використовувати ART"</item>
+     <item msgid="4530003713865319928">"Використовувати складання ART для налагодження"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-vi/arrays.xml b/packages/apps/Settings/res/values-vi/arrays.xml
+index 4fd848c..66f31aa 100644
+--- a/packages/apps/Settings/res/values-vi/arrays.xml
++++ b/packages/apps/Settings/res/values-vi/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (gỡ lỗi)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Sử dụng Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Sử dụng ART"</item>
+     <item msgid="4530003713865319928">"Sử dụng bản dựng gỡ lỗi ART"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-zh-rCN/arrays.xml b/packages/apps/Settings/res/values-zh-rCN/arrays.xml
+index 1e078f6..8103b76 100644
+--- a/packages/apps/Settings/res/values-zh-rCN/arrays.xml
++++ b/packages/apps/Settings/res/values-zh-rCN/arrays.xml
+@@ -380,11 +380,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART（调试）"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"使用 Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"使用 ART"</item>
+     <item msgid="4530003713865319928">"使用 ART 调试版本"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-zh-rHK/arrays.xml b/packages/apps/Settings/res/values-zh-rHK/arrays.xml
+index e38952c..574a32d 100644
+--- a/packages/apps/Settings/res/values-zh-rHK/arrays.xml
++++ b/packages/apps/Settings/res/values-zh-rHK/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (偵錯)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"使用 Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"使用 ART"</item>
+     <item msgid="4530003713865319928">"使用 ART 偵錯版本"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-zh-rTW/arrays.xml b/packages/apps/Settings/res/values-zh-rTW/arrays.xml
+index 7b2c62f..e02c30a 100644
+--- a/packages/apps/Settings/res/values-zh-rTW/arrays.xml
++++ b/packages/apps/Settings/res/values-zh-rTW/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"ART"</item>
+     <item msgid="7839859333977894115">"ART (偵錯)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"使用 Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"使用 ART"</item>
+     <item msgid="4530003713865319928">"使用 ART 偵錯版本"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values-zu/arrays.xml b/packages/apps/Settings/res/values-zu/arrays.xml
+index 39b6723..3a65146 100644
+--- a/packages/apps/Settings/res/values-zu/arrays.xml
++++ b/packages/apps/Settings/res/values-zu/arrays.xml
+@@ -365,11 +365,13 @@
+   </string-array>
+   <string-array name="select_runtime_titles">
+     <item msgid="3574453009229338122">"I-Dalvik"</item>
++    <item msgid="3574453009229338123">"Dalvik (qcom)"</item>
+     <item msgid="8978402910750533864">"UBUCIKO"</item>
+     <item msgid="7839859333977894115">"UBUCIKO (ukulungisa iphutha)"</item>
+   </string-array>
+   <string-array name="select_runtime_summaries">
+     <item msgid="6412880178297884701">"Sebenzisa i-Dalvik"</item>
++    <item msgid="6412880178297884702">"Use Dalvik qcom optimized"</item>
+     <item msgid="5131846588686178907">"Sebenzisa UBUCIKO"</item>
+     <item msgid="4530003713865319928">"Sebenzisa ukwakha kokulungisa iphutha LOBUCIKO"</item>
+   </string-array>
+diff --git a/packages/apps/Settings/res/values/arrays.xml b/packages/apps/Settings/res/values/arrays.xml
+index 1fe0284..0f6ef16 100644
+--- a/packages/apps/Settings/res/values/arrays.xml
++++ b/packages/apps/Settings/res/values/arrays.xml
+@@ -873,6 +873,7 @@
+     <!-- Titles for runtime selection preference. [CHAR LIMIT=35] -->
+     <string-array name="select_runtime_titles">
+         <item>Dalvik</item>
++        <item>Dalvik (qcom)</item>
+         <item>ART</item>
+         <item>ART (debug)</item>
+     </string-array>
+@@ -880,6 +881,7 @@
+     <!-- Values for runtime selection preference. -->
+     <string-array name="select_runtime_values" translatable="false" >
+         <item>libdvm.so</item>
++        <item>libdvm-qcom.so</item>
+         <item>libart.so</item>
+         <item>libartd.so</item>
+     </string-array>
+@@ -887,6 +889,7 @@
+     <!-- Summaries for runtime selection preference. [CHAR LIMIT=100]-->
+     <string-array name="select_runtime_summaries" >
+         <item>Use Dalvik</item>
++        <item>Use Dalvik qcom optimized</item>
+         <item>Use ART</item>
+         <item>Use ART debug build</item>
+     </string-array>
