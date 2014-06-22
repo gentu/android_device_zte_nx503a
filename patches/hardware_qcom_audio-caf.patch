@@ -1,0 +1,12 @@
+diff --git a/hardware/qcom/audio-caf/hal/audio_extn/usb.c b/hardware/qcom/audio-caf/hal/audio_extn/usb.c
+index 0240d7c..1651736 100644
+--- a/hardware/qcom/audio-caf/hal/audio_extn/usb.c
++++ b/hardware/qcom/audio-caf/hal/audio_extn/usb.c
+@@ -310,6 +310,7 @@ static int usb_get_capability(char *type, int32_t *channels,
+                This is because proxy port is used to read from/write to DSP */
+             if ((rates_supported[i] == USB_PROXY_RATE_8000) ||
+                 (rates_supported[i] == USB_PROXY_RATE_16000) ||
++                (rates_supported[i] == USB_PROXY_RATE_44100) ||
+                 (rates_supported[i] == USB_PROXY_RATE_48000)) {
+                 *sample_rate = rates_supported[i];
+             }
