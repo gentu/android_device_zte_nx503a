@@ -2,6 +2,14 @@ diff --git a/hardware/qcom/audio-caf/hal/audio_extn/usb.c b/hardware/qcom/audio-
 index 0240d7c..1651736 100644
 --- a/hardware/qcom/audio-caf/hal/audio_extn/usb.c
 +++ b/hardware/qcom/audio-caf/hal/audio_extn/usb.c
+@@ -44,6 +44,7 @@
+ #define USB_PROXY_PERIOD_SIZE                3072
+ #define USB_PROXY_RATE_8000                  8000
+ #define USB_PROXY_RATE_16000                 16000
++#define USB_PROXY_RATE_44100                 44100
+ #define USB_PROXY_RATE_48000                 48000
+ #define USB_PERIOD_SIZE                      2048
+ #define USB_BUFF_SIZE                        2048
 @@ -310,6 +310,7 @@ static int usb_get_capability(char *type, int32_t *channels,
                 This is because proxy port is used to read from/write to DSP */
              if ((rates_supported[i] == USB_PROXY_RATE_8000) ||
