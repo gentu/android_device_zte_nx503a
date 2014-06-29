@@ -51,6 +51,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
+#Capability
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/capability.xml:system/etc/capability.xml
+
 # Custom init / uevent
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/fstab.qcom:root/fstab.qcom \
@@ -94,6 +98,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths_auxpcm.xml
+
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
