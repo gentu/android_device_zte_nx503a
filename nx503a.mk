@@ -136,6 +136,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ds1-default.xml:system/etc/ds1-default.xml
 
+# Misc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ftm_test_config:system/etc/ftm_test_config
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
