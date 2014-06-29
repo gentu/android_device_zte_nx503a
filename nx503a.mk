@@ -135,6 +135,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wfd/wfdconfig640_480.xml:system/etc/wfdconfig640_480.xml \
     $(LOCAL_PATH)/configs/wfd/wfdconfig800_480.xml:system/etc/wfdconfig800_480.xml
 
+# WiFi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/nvram.txt:system/etc/wifi/nvram.txt
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
