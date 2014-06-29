@@ -41,6 +41,7 @@
 /dev/smd5                 0660   system     system
 /dev/smd6                 0660   system     system
 /dev/smd7                 0660   bluetooth  bluetooth
+/dev/ccid_bridge          0660   system     system
 
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
@@ -111,7 +112,7 @@
 /dev/msm_vidc_enc_sec     0660   system     audio
 /dev/msm_vpe_standalone   0660   system     camera
 /dev/msm_rotator          0660   system     system
-/dev/hw_random            0660   system     system
+/dev/hw_random            0440   system     system
 /dev/adsprpc-smd          0664   system     system
 
 #permissions for audio
@@ -148,6 +149,7 @@
 /dev/tty_sdio_00          0660   system     system
 /dev/ttyGS0               0660   system     system
 /dev/i2c-5                0660   media       media
+/dev/voice_svc            0660   system     audio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
@@ -157,9 +159,6 @@
 # Broadcast devices
 /dev/tsc_mux0             0660   media       media
 /dev/tsc_ci0              0660   media       media
-
-#ZTEMT add by chengdongsheng for nfc-pn544
-/dev/pn544 0660 nfc nfc
 
 # sensors
 /sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
@@ -180,11 +179,14 @@
 /sys/devices/virtual/graphics/fb1   edid_modes          0440 system system
 /sys/devices/virtual/graphics/fb1   product_description 0640 system system
 /sys/devices/virtual/graphics/fb1   vendor_name         0640 system system
- 
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
+/dev/wcnss_ctrl           0660   system     system
+
 #nfc permissions
 /dev/nfc-nci              0660    nfc         nfc
+/dev/pn544                0660    nfc         nfc
 
 # UIO devices
 /dev/uio0                 0660   system     system
