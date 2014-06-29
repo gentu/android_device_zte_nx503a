@@ -57,6 +57,9 @@
 <!ATTLIST VideoEncoderCap maxFrameHeight CDATA #REQUIRED>
 <!ATTLIST VideoEncoderCap minFrameRate CDATA #REQUIRED>
 <!ATTLIST VideoEncoderCap maxFrameRate CDATA #REQUIRED>
+<!ATTLIST VideoEncoderCap maxHFRFrameWidth CDATA #REQUIRED>
+<!ATTLIST VideoEncoderCap maxHFRFrameHeight CDATA #REQUIRED>
+<!ATTLIST VideoEncoderCap maxHFRMode CDATA #REQUIRED>
 <!ELEMENT AudioEncoderCap EMPTY>
 <!ATTLIST AudioEncoderCap name (amrnb|amrwb|aac|wma|lpcm) #REQUIRED>
 <!ATTLIST AudioEncoderCap enabled (true|false) #REQUIRED>
@@ -188,12 +191,12 @@
             bitRate="100000000"
             width="4096"
             height="2160"
-             frameRate="30" />
+            frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
-             channels="2" />
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="4kuhd" fileFormat="mp4" duration="30">
@@ -503,7 +506,7 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
-<!-- 
+
     <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
@@ -516,7 +519,7 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
--->
+
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
              bitRate="192000"
@@ -724,9 +727,9 @@
              channels="2" />
     </EncoderProfile>
 
-        <ImageEncoding quality="100" />
-        <ImageEncoding quality="90" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="95" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>
@@ -743,19 +746,25 @@
         minBitRate="64000" maxBitRate="100000000"
         minFrameWidth="176" maxFrameWidth="4096"
         minFrameHeight="144" maxFrameHeight="2160"
-        minFrameRate="15" maxFrameRate="30" />
+        minFrameRate="15" maxFrameRate="30"
+        maxHFRFrameWidth="1920" maxHFRFrameHeight="1080"
+        maxHFRMode="120"  />
 
     <VideoEncoderCap name="h263" enabled="true"
         minBitRate="64000" maxBitRate="2000000"
         minFrameWidth="176" maxFrameWidth="800"
         minFrameHeight="144" maxFrameHeight="480"
-        minFrameRate="15" maxFrameRate="30" />
+        minFrameRate="15" maxFrameRate="30"
+        maxHFRFrameWidth="0" maxHFRFrameHeight="0"
+        maxHFRMode="0"  />
 
     <VideoEncoderCap name="m4v" enabled="true"
         minBitRate="64000" maxBitRate="20000000"
         minFrameWidth="176" maxFrameWidth="1920"
         minFrameHeight="144" maxFrameHeight="1088"
-        minFrameRate="15" maxFrameRate="30" />
+        minFrameRate="15" maxFrameRate="30"
+        maxHFRFrameWidth="0" maxHFRFrameHeight="0"
+        maxHFRMode="0"  />
 
     <AudioEncoderCap name="aac" enabled="true"
         minBitRate="8000" maxBitRate="96000"
@@ -812,7 +821,7 @@
     <!--
       Codec = h.264, Baseline profile, level 4.1
     -->
-    <ExportVideoProfile name="h264" profile= "1" level="4096"/>
+    <ExportVideoProfile name="h264" profile= "1" level="1"/>
     <!--
       Codec = h.263, Baseline profile, level 0
     -->
@@ -820,5 +829,5 @@
     <!--
       Codec = mpeg4, Simple profile, level 5
     -->
-    <ExportVideoProfile name="m4v" profile= "1" level="128"/>
+    <ExportVideoProfile name="m4v" profile= "1" level="1"/>
 </MediaSettings>
