@@ -122,10 +122,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
-# Wifi
+# WFD
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    $(LOCAL_PATH)/configs/wfd/wfdconfig.xml:system/etc/wfdconfig.xml \
+    $(LOCAL_PATH)/configs/wfd/wfdconfig960_540.xml:system/etc/wfdconfig960_540.xml \
+    $(LOCAL_PATH)/configs/wfd/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
+    $(LOCAL_PATH)/configs/wfd/wfdconfig1280_720.xml:system/etc/wfdconfig1280_720.xml \
+    $(LOCAL_PATH)/configs/wfd/wfdconfig640_480.xml:system/etc/wfdconfig640_480.xml \
+    $(LOCAL_PATH)/configs/wfd/wfdconfig800_480.xml:system/etc/wfdconfig800_480.xml
 
 # Media
 PRODUCT_COPY_FILES += \
