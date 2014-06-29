@@ -144,6 +144,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/configs/ftm_test_config:system/etc/ftm_test_config \
+    $(LOCAL_PATH)/configs/mobilenuminmainland.db:system/etc/mobilenuminmainland.db \
     $(LOCAL_PATH)/configs/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf
 
 # Filesystem management tools
