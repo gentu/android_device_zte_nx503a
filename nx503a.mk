@@ -132,6 +132,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
+# Dolby
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ds1-default.xml:system/etc/ds1-default.xml
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
