@@ -64,7 +64,7 @@ PRODUCT_COPY_FILES += \
 # Custom init / uevent
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/fstab.qcom:root/fstab.qcom \
-     $(LOCAL_PATH)/init.qcom.rc:root/init.qcom.rc \
+     $(LOCAL_PATH)/configs/init.qcom.rc:root/init.qcom.rc \
      $(LOCAL_PATH)/configs/init.qcom.usb.rc:root/init.qcom.usb.rc \
      $(LOCAL_PATH)/configs/ueventd.qcom.rc:root/ueventd.qcom.rc
 
