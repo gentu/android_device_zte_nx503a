@@ -51,9 +51,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
-#Capability
+# Capability
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/capability.xml:system/etc/capability.xml
+
+# CnE
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/cne/NsrmConfiguration.xml:system/etc/cne/NsrmConfiguration.xml \
+    $(LOCAL_PATH)/configs/cne/SwimConfig.xml:system/etc/cne/SwimConfig.xml \
+    $(LOCAL_PATH)/configs/cne/andsfCne.xml:system/etc/cne/andsfCne.xml
 
 # Custom init / uevent
 PRODUCT_COPY_FILES += \

@@ -213,6 +213,10 @@ on post-fs-data
     #  bluetooth
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
 
+    # Create the directories used by CnE subsystem
+    mkdir /data/connectivity 0771 system system
+    mkdir /data/connectivity/nsrm 0771 system system
+
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
 
