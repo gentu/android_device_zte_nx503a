@@ -127,11 +127,9 @@ TARGET_NO_RPC := true
 # Enable CNE
 BOARD_USES_QCNE := true
 
-# PowerHAL
+# QCOM PowerHAL
 TARGET_POWERHAL_VARIANT := qcom
-
-# Kernel handles input boosting
-TARGET_POWERHAL_TOUCH_BOOST := false
+TARGET_USES_CPU_BOOST_HINT := true
 
 # LightHAL
 TARGET_PROVIDES_LIBLIGHT := true
