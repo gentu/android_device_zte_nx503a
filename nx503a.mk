@@ -58,23 +58,9 @@ PRODUCT_COPY_FILES += \
 # Custom init / uevent
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/fstab.qcom:root/fstab.qcom \
-     $(LOCAL_PATH)/configs/init.poweroffcharge.rc:root/lpm.rc \
-     $(LOCAL_PATH)/configs/init.qcom.rc:root/init.qcom.rc \
-     $(LOCAL_PATH)/configs/init.qcom.sh:root/init.qcom.sh \
-     $(LOCAL_PATH)/configs/init.target.rc:root/init.target.rc \
+     $(LOCAL_PATH)/init.qcom.rc:root/init.qcom.rc \
+     $(LOCAL_PATH)/configs/init.qcom.usb.rc:root/init.qcom.usb.rc \
      $(LOCAL_PATH)/configs/ueventd.qcom.rc:root/ueventd.qcom.rc
-
-# USB function switching
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/configs/init.qcom.usb.rc:root/init.qcom.usb.rc
-
-# Qcom scripts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.crda.sh:system/etc/init.crda.sh \
-    $(LOCAL_PATH)/configs/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
-    $(LOCAL_PATH)/configs/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
-    $(LOCAL_PATH)/configs/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
-    $(LOCAL_PATH)/configs/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh
 
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
@@ -130,7 +116,10 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     audiod \
-    tinymix
+    tinycap \
+    tinymix \
+    tinyplay \
+    tinypcminfo
 
 # Display
 PRODUCT_PACKAGES += \
@@ -351,8 +340,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # call dalvik heap config
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.m
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.m
 
 # Wifi bcm4339
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
