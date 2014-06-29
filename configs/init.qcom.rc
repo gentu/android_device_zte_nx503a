@@ -595,6 +595,11 @@ service mpdecision /system/bin/mpdecision --avg_comp
     #MY_DEL# user root
     #MY_DEL# group root
 
+service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
+   user system
+   group system
+   disabled
+
 service thermal-engine /system/bin/thermal-engine
    class main
    user root
