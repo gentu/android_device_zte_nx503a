@@ -138,6 +138,7 @@ PRODUCT_COPY_FILES += \
 
 # Misc
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/configs/ftm_test_config:system/etc/ftm_test_config
 
 # Filesystem management tools
