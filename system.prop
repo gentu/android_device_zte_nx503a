@@ -1,3 +1,6 @@
+# RIL
+ro.telephony.ril_class=NubiaUiccRIL
+ro.telephony.ril.v3=qcomdsds
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
@@ -173,10 +176,6 @@ persist.sys.usb.config=mass_storage,adb
 
 # DPI
 ro.sf.lcd_density=480
-
-# RIL
-ro.telephony.ril_class=ZTEQualcommUiccRIL
-ro.telephony.ril.v3=qcomdsds
 
 # Chip name
 ro.chipname=msm8974
