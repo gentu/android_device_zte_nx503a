@@ -20,6 +20,6 @@
 <resources>
 
     <!-- Use ZSL mode for Qualcomm cameras -->
-    <bool name="enableZSL">false</bool>
+    <bool name="enableZSL">enable</bool>
 
 </resources>
