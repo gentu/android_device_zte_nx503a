@@ -1,6 +1,5 @@
 # RIL
 ro.telephony.ril_class=NubiaUiccRIL
-ro.telephony.ril.v3=qcomdsds
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
@@ -27,10 +26,6 @@ debug.egl.hw=1
 debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
-# luochangyang 2014/03/12
-ro.sf.lcd_density=480
-# luochangyang END
-dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 
@@ -65,6 +60,9 @@ vidc.debug.level=1
 #
 ro.use_data_netmgrd=true
 ro.data.large_tcp_window_size=true
+
+#Disable netmgr QoS, because it not supported in CM
+persist.data.netmgrd.qos.enable=false
 
 #system props for time-services
 persist.timed.enable=true
@@ -168,7 +166,7 @@ dmid=3067269873
 
 # WiFi
 wifi.interface=wlan0
-wifi.supplicant_scan_interval=15
+wifi.supplicant_scan_interval=240
 ro.sys.umsdirtyratio=20
 
 # Set default USB interface
@@ -189,6 +187,9 @@ persist.radio.apm_sim_not_pwdn=1
 # Upto 3 layers can go through overlays
 com.qc.hardware=true
 
+# Disable error check
+ro.kernel.android.checkjni=0
+
 dalvik.vm.heapstartsize=8m
 dalvik.vm.heapgrowthlimit=192m
 dalvik.vm.heapsize=512m
@@ -203,9 +204,6 @@ drm.service.enabled=true
 ro.ireader.channel=109188
 audio.effect.name=dolby
 persist.sys.singlehand=1
-persist.sys.dalvik.vm.lib=libdvm.so
-net.bt.name=Android
-dalvik.vm.stack-trace-file=/data/anr/traces.txt
 ro.qc.sdk.izat.premium_enabled=1
 ro.qc.sdk.izat.service_mask=0x5
 persist.gps.qc_nlp_in_use=1

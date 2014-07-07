@@ -16,6 +16,6 @@ PRODUCT_DEFAULT_LANGUAGE := ru
 PRODUCT_DEFAULT_REGION := RU
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.language=ru \
-    persist.sys.country=RU \
+    ro.product.locale.language=ru \
+    ro.product.locale.region=RU \
     persist.sys.timezone=Europe/Moscow
