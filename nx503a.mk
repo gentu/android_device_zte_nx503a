@@ -51,16 +51,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
-# Capability
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/capability.xml:system/etc/capability.xml
-
-# CnE
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/cne/NsrmConfiguration.xml:system/etc/cne/NsrmConfiguration.xml \
-    $(LOCAL_PATH)/configs/cne/SwimConfig.xml:system/etc/cne/SwimConfig.xml \
-    $(LOCAL_PATH)/configs/cne/andsfCne.xml:system/etc/cne/andsfCne.xml
-
 # Custom init / uevent
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/fstab.qcom:root/fstab.qcom \
@@ -75,37 +65,12 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
      $(LOCAL_PATH)/configs/cyttsp4_mt.idc:system/usr/idc/input_proxy.idc
 
-# ACDB configs
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/acdbdata/MTP/MTP_Handset_cal.acdb:system/etc/acdbdata/MTP/MTP_Handset_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/MTP/MTP_Headset_cal.acdb:system/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/MTP/MTP_Hdmi_cal.acdb:system/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/MTP/MTP_Speaker_cal.acdb:system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/MTP/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/MTP/MTP_General_cal.acdb:system/etc/acdbdata/MTP/MTP_General_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/MTP/MTP_Global_cal.acdb:system/etc/acdbdata/MTP/MTP_Global_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Liquid/Liquid_Headset_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Headset_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Liquid/Liquid_Handset_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Handset_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Liquid/Liquid_Hdmi_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Hdmi_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Liquid/Liquid_Global_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Global_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Liquid/Liquid_Bluetooth_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Bluetooth_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Liquid/Liquid_Speaker_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Speaker_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Liquid/Liquid_General_cal.acdb:system/etc/acdbdata/Liquid/Liquid_General_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Fluid/Fluid_Global_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Global_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Fluid/Fluid_Bluetooth_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Bluetooth_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Fluid/Fluid_Headset_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Headset_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Fluid/Fluid_General_cal.acdb:system/etc/acdbdata/Fluid/Fluid_General_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Fluid/Fluid_Handset_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Handset_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Fluid/Fluid_Hdmi_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Hdmi_cal.acdb \
-    $(LOCAL_PATH)/configs/acdbdata/Fluid/Fluid_Speaker_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Speaker_cal.acdb \
-
 # Audio Policy Config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths_auxpcm.xml
-
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
@@ -126,21 +91,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
-# WFD
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wfd/wfdconfig.xml:system/etc/wfdconfig.xml \
-    $(LOCAL_PATH)/configs/wfd/wfdconfig960_540.xml:system/etc/wfdconfig960_540.xml \
-    $(LOCAL_PATH)/configs/wfd/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
-    $(LOCAL_PATH)/configs/wfd/wfdconfig1280_720.xml:system/etc/wfdconfig1280_720.xml \
-    $(LOCAL_PATH)/configs/wfd/wfdconfig640_480.xml:system/etc/wfdconfig640_480.xml \
-    $(LOCAL_PATH)/configs/wfd/wfdconfig800_480.xml:system/etc/wfdconfig800_480.xml
-
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant.conf:system/etc/wifi/p2p_supplicant.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    $(LOCAL_PATH)/configs/wifi/nvram.txt:system/etc/firmware/bcm4339/nvram.txt \
-    $(LOCAL_PATH)/configs/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat
+    $(LOCAL_PATH)/configs/wifi/nvram.txt:system/etc/firmware/bcm4339/nvram.txt
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -154,9 +109,7 @@ PRODUCT_COPY_FILES += \
 # Misc
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/flp.conf:system/etc/flp.conf \
-    $(LOCAL_PATH)/configs/ftm_test_config:system/etc/ftm_test_config \
-    $(LOCAL_PATH)/configs/mobilenuminmainland.db:system/etc/mobilenuminmainland.db \
-    $(LOCAL_PATH)/configs/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf
+    $(LOCAL_PATH)/configs/ftm_test_config:system/etc/ftm_test_config
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
