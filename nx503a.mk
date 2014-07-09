@@ -174,6 +174,8 @@ PRODUCT_PACKAGES += \
     gps.msm8974 \
     libgps.utils \
     libloc_adapter \
+    libloc_api_v02 \
+    libloc_core \
     libloc_eng
 
 # NFC packages
