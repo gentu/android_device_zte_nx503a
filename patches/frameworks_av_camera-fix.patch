@@ -7,7 +7,7 @@ index 09e0e93..6fca89d 100644
  const char CameraParameters::WHITE_BALANCE_MANUAL_CCT[] = "manual-cct";
  #endif
 +#ifdef NUBIA_CAMERA_HARDWARE
-+const char CameraParameters::WHITE_BALANCE_MANUAL_CCTE[] = "manual-ccte";
++const char CameraParameters::WHITE_BALANCE_MANUAL_CCT[] = "manual-cct";
 +#endif
  
  // Values for effect settings.
@@ -21,7 +21,7 @@ index 4a5ec8f..2949483 100644
  #endif
  
 +#ifdef NUBIA_CAMERA_HARDWARE
-+    static const char WHITE_BALANCE_MANUAL_CCTE[];
++    static const char WHITE_BALANCE_MANUAL_CCT[];
 +#endif
 +
      // Values for effect settings.
