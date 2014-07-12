@@ -825,7 +825,7 @@
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
-        <ctl name="RX7 Digital Volume" value="81" />
+        <ctl name="RX7 Digital Volume" value="83" />
     </path>
 
     <path name="speaker-fluid">
@@ -993,7 +993,8 @@
     <path name="speaker-and-headphones">
         <path name="headphones" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
-        <ctl name="RX7 Digital Volume" value="88" />
+        <ctl name="RX7 MIX1 INP2" value="RX2" />
+        <ctl name="RX7 Digital Volume" value="83" />
     </path>
 
     <path name="speaker-and-headphones-fluid">
