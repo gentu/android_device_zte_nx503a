@@ -15,7 +15,7 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_CHARACTERISTICS := phablet
 
 # Enable Torch
 PRODUCT_PACKAGES += \
