@@ -236,6 +236,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     qcmediaplayer
 
+PRODUCT_BOOT_JARS += oem-services:nubia:nubia-common:qcom.fmradio:WfdCommon:org.codeaurora.Performance
+
 # for off charging mode
 PRODUCT_PACKAGES += \
     charger \
