@@ -65,6 +65,10 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
      $(LOCAL_PATH)/configs/cyttsp4_mt.idc:system/usr/idc/input_proxy.idc
 
+# External key layouts
+PRODUCT_COPY_FILES += \
+      $(LOCAL_PATH)/configs/Vendor_0a5c_Product_8502.kl:system/usr/keylayout/Vendor_0a5c_Product_8502.kl
+
 # Audio Policy Config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
