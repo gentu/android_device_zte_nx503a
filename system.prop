@@ -238,3 +238,6 @@ persist.timed.enable=true
 
 # Disable mobile-network(first initialization)
 ro.com.android.mobiledata=false
+
+# Video enhancer (w=low, n=middle, i=high)
+persist.sys.image.enhance=i
