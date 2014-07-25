@@ -247,6 +247,11 @@ PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
+# Recovery Options
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cwm.forbid_format=/persist,/firmware,/boot,/sbl1,/tz,/rpm,/sdi,/aboot,/s
+    ro.cwm.forbid_mount=/persist,/firmware
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
