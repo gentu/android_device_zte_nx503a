@@ -253,8 +253,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.forbid_mount=/persist,/firmware
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_CONFIG := normal ldpi mdpi tvdpi hdpi xhdpi xxhdpi xxxhdpi
+PRODUCT_AAPT_PREF_CONFIG :=
 
 DEVICE_PACKAGE_OVERLAYS += device/zte/nx503a/overlay
 
