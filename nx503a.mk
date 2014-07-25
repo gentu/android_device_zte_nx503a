@@ -82,7 +82,8 @@ PRODUCT_COPY_FILES += \
 
 # Thermal-engine
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine.conf
+    $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf \
+    $(LOCAL_PATH)/configs/thermal-engine-8974pro.conf:system/etc/thermal-engine-8974pro.conf
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
