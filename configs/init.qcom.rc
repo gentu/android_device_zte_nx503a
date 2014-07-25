@@ -59,9 +59,6 @@ on early-boot
     write /sys/kernel/boot_adsp/boot 1
 
 on boot
-        #MY_DEL# # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
-        #MY_DEL# write /sys/module/wakelock/parameters/debug_mask 7
-
     # bluetooth
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
@@ -85,8 +82,8 @@ on boot
     chmod 0660 /dev/ttyHS1
     chmod 0660 /dev/ttyHS2
 
-    chown bluetooth bluetooth /sys/devices/*/clock
-    chmod 0660 /sys/devices/*/clock
+    chown bluetooth bluetooth /sys/devices/f995e000.uart/clock
+    chmod 0660 /sys/devices/f995e000.uart/clock
 
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
@@ -98,14 +95,6 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-        #MY_DEL# # Camera Recording
-        #MY_DEL# mkdir /dev/video
-        #MY_DEL# symlink /dev/video32 /dev/video/venus_dec
-        #MY_DEL# symlink /dev/video33 /dev/video/venus_enc
-
-        #MY_DEL# # Allow QMUX daemon to assign port open wait time
-        #MY_DEL# chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
-
     #For bridgemgr daemon to inform the USB driver of the correct transport
     chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
 
@@ -114,7 +103,6 @@ on boot
     write /proc/sys/net/core/rmem_max  2097152
     write /proc/sys/net/core/wmem_max  2097152
 
-#MY_START#
     # Define TCP buffer sizes
     # ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax
     setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
@@ -128,7 +116,6 @@ on boot
     setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
     setprop net.tcp.buffersize.evdo    4094,87380,262144,4096,16384,262144
-#MY_END#
 
     # create symlink for fb1 as HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
@@ -184,7 +171,6 @@ on boot
     #venus
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
 
-#MY_START#
     # Leds
     chown system system /sys/class/leds/red/fade_parameter
     chown system system /sys/class/leds/red/grade_parameter
@@ -214,7 +200,6 @@ on property:persist.sys.image.colortmp=n
 
 on property:persist.sys.image.colortmp=c
     write /sys/kernel/lcd_enhance/colortmp 26
-#MY_END#
 
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
@@ -283,7 +268,6 @@ on post-fs-data
     mkdir /data/misc/sensors
     chmod 775 /data/misc/sensors
 
-#MY_START#
     # Sensor
     mkdir /persist/sensors 0775 system system
     write /persist/sensors/sensors_settings 1
@@ -328,7 +312,6 @@ on post-fs-data
     # Sensor Common
     chown system system /sys/class/sensor/temp_humidity/raw_humidity
     chown system system /sys/class/sensor/temp_humidity/raw_temp
-#MY_END#
 
     # Create the directories used by the Wireless subsystem
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -346,7 +329,6 @@ on post-fs-data
 
     # Ecc_Handler qcril.db
     mkdir /data/misc/radio 0770 radio radio
-        #MY_DEL# symlink /system/etc/qcril.db /data/misc/radio/qcril.db
 
     setprop vold.post_fs_data_done 1
 
@@ -396,8 +378,6 @@ on post-fs-data
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 300000
     write /sys/module/msm_thermal/core_control/enabled 1
-        #MY_DEL# chown root.system /sys/devices/system/cpu/mfreq
-        #MY_DEL# chmod 220 /sys/devices/system/cpu/mfreq
     chown system system /sys/devices/system/cpu/cpu1/online
     chown system system /sys/devices/system/cpu/cpu2/online
     chown system system /sys/devices/system/cpu/cpu3/online
@@ -405,17 +385,6 @@ on post-fs-data
     chmod 664 /sys/devices/system/cpu/cpu2/online
     chmod 664 /sys/devices/system/cpu/cpu3/online
     write /dev/cpuctl/apps/cpu.notify_on_migrate 1
-
-    # Hardware tunables
-        #MY_DEL# chown root system /sys/class/timed_output/vibrator/amp
-        #MY_DEL# chown root system /sys/devices/platform/kcal_ctrl.0/kcal
-        #MY_DEL# chown root system /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
-        #MY_DEL# chmod 0664 /sys/class/timed_output/vibrator/amp
-        #MY_DEL# chmod 0664 /sys/devices/platform/kcal_ctrl.0/kcal
-        #MY_DEL# chmod 0664 /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
-        #MY_DEL# restorecon /sys/class/timed_output/vibrator/amp
-        #MY_DEL# restorecon /sys/devices/platform/kcal_ctrl.0/kcal
-        #MY_DEL# restorecon /sys/devices/platform/kcal_ctrl.0/kcal_ctrl
 
     # Torch
     chown system camera /sys/class/leds/led:flash_torch/brightness
@@ -484,7 +453,7 @@ on property:sys.boot_completed=1
     start mpdecision
 
     # enable slimport detection
-        #MY_DEL# write /sys/module/slimport/parameters/enable_irq 1
+    write /sys/module/slimport/parameters/enable_irq 1
 
 on property:init.svc.bootanim=stopped
     write /sys/block/mmcblk0/queue/scheduler row
@@ -643,12 +612,6 @@ service mpdecision /system/bin/mpdecision --avg_comp
    group root system
    disabled
 
-#MY_DEL# service ssr_ramdump /system/bin/subsystem_ramdump -m -t emmc
-    #MY_DEL# class main
-    #MY_DEL# disabled
-    #MY_DEL# user root
-    #MY_DEL# group root
-
 service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
    user system
    group system
@@ -664,17 +627,17 @@ service time_daemon /system/bin/time_daemon
     user root
     group root
 
-#MY_DEL# service qrngd /system/bin/qrngd -f
-    #MY_DEL# class main
-    #MY_DEL# user root
-    #MY_DEL# group root
+service qrngd /system/bin/qrngd -f
+    class main
+    user root
+    group root
 
-#MY_DEL# service qrngp /system/bin/qrngp
-    #MY_DEL# class main
-    #MY_DEL# user root
-    #MY_DEL# group root
-    #MY_DEL# oneshot
-    #MY_DEL# disabled
+service qrngp /system/bin/qrngp
+    class main
+    user root
+    group root
+    oneshot
+    disabled
 
 on property:sys.boot_completed=1
     start qrngp
