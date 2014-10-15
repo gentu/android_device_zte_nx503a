@@ -242,6 +242,11 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_BOOT_JARS += oem-services:nubia:nubia-common:qcom.fmradio:WfdCommon:org.codeaurora.Performance
 
+PRODUCT_PACKAGES += \
+    qrngd \
+    qrngp \
+    qrngtest
+
 # for off charging mode
 PRODUCT_PACKAGES += \
     charger \
