@@ -37,12 +37,12 @@ COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # GCC
-TARGET_GCC_VERSION_EXP := 4.8
-TARGET_TOOLCHAIN_ROOT := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-4.8
+TARGET_GCC_VERSION_EXP := 4.9
+TARGET_TOOLCHAIN_ROOT := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-4.9
 TARGET_TOOLS_PREFIX := $(TARGET_TOOLCHAIN_ROOT)/bin/arm-linux-androideabi-
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
-#TARGET_GLOBAL_CFLAGS += -Wno-error=unused-parameter -Wno-error=unused-but-set-variable -Wno-error=maybe-uninitialized
-#COMMON_GLOBAL_CFLAGS += -Wno-error=unused-parameter -Wno-error=unused-but-set-variable -Wno-error=maybe-uninitialized
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex_a15-linux-gnueabihf-linaro_4.9.2-2014.09
+TARGET_GLOBAL_CFLAGS += -Wno-error=unused-parameter -Wno-error=unused-but-set-variable -Wno-error=maybe-uninitialized
+COMMON_GLOBAL_CFLAGS += -Wno-error=unused-parameter -Wno-error=unused-but-set-variable -Wno-error=maybe-uninitialized
 
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION:= true
@@ -54,8 +54,7 @@ TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 # Kernel information
 TARGET_KERNEL_SOURCE := kernel/zte/nx503a
-TARGET_KERNEL_CONFIG := cm_nx503a_defconfig
-TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
+TARGET_KERNEL_CONFIG := msm8974-NX503A_defconfig
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -66,8 +65,6 @@ TARGET_ZTEMT_DTS := true
 
 # Custom boot
 BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
-BOARD_CUSTOM_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := device/zte/nx503a/prebuilt/kernel
 
 # Partition information
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
