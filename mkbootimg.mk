@@ -4,7 +4,7 @@ $(uncompressed_ramdisk): $(INSTALLED_RAMDISK_TARGET)
 
 KERNEL_CONFIG := $(KERNEL_OUT)/.config
 DTS_NAMES := msm8974
-DTS_FILES = $(wildcard $(TOP)/$(KERNEL_SRC)/arch/arm/boot/dts/msm8974-v2.2-mtp-ztemt-NX503A.dts)
+DTS_FILES = $(wildcard $(TOP)/$(KERNEL_SRC)/arch/arm/boot/dts/msm8974-v2.2-mtp-NX503A.dts)
 DTS_FILE = $(lastword $(subst /, ,$(1)))
 DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call DTS_FILE,$(1))))
 ZIMG_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%-zImage,$(call DTS_FILE,$(1))))
