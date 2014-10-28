@@ -40,9 +40,11 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 TARGET_GCC_VERSION_EXP := 4.9
 TARGET_TOOLCHAIN_ROOT := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-4.9
 TARGET_TOOLS_PREFIX := $(TARGET_TOOLCHAIN_ROOT)/bin/arm-linux-androideabi-
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex_a15-linux-gnueabihf-linaro_4.9.2-2014.09
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex_a15-linux-gnueabihf-linaro_4.9.2-2014.09
 TARGET_GLOBAL_CFLAGS += -Wno-error=unused-parameter -Wno-error=unused-but-set-variable -Wno-error=maybe-uninitialized
 COMMON_GLOBAL_CFLAGS += -Wno-error=unused-parameter -Wno-error=unused-but-set-variable -Wno-error=maybe-uninitialized
+
+DTS_NAME := msm8974-v2.2-mtp-NX503A
 
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION:= true
