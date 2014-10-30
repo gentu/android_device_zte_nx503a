@@ -16,7 +16,7 @@
     <include preset="ieq_open" />
   </profile>
   <profile id="music" name="Music">
-    <data>aoon=[2] dea=[4] ded=[0] deon=[0] dhrg=[0] dhsb=[32] dssb=[0] dssf=[200] dvla=[4] dvle=[1] dvme=[0] gebg=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] geon=[0] iea=[10] ieon=[1] ngon=[2] plb=[0] plmd=[4] vdhe=[2] vmb=[144] vmon=[1] vspe=[0]</data>
+    <data>aoon=[2] dea=[4] ded=[0] deon=[0] dhrg=[0] dhsb=[32] dssb=[0] dssf=[200] dvla=[4] dvle=[0] dvme=[0] gebg=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] geon=[0] iea=[10] ieon=[1] ngon=[2] plb=[0] plmd=[4] vdhe=[2] vmb=[144] vmon=[0] vspe=[0]</data>
     <include preset="ieq_open" />
   </profile>
   <profile id="game" name="Game">

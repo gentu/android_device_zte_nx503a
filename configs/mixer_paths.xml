@@ -37,8 +37,8 @@
     <ctl name="ADC2 Volume" value="19" />
     <ctl name="ADC3 Volume" value="0" />
     <ctl name="ADC4 Volume" value="0" />
-    <ctl name="ADC5 Volume" value="19" />
-    <ctl name="ADC6 Volume" value="19" />
+    <ctl name="ADC5 Volume" value="9" />
+    <ctl name="ADC6 Volume" value="9" />
     <ctl name="DEC1 Volume" value="84" />
     <ctl name="DEC2 Volume" value="84" />
     <ctl name="DEC3 Volume" value="84" />
@@ -259,6 +259,7 @@
     <ctl name="IIR1 Enable Band4" value="0" />
     <ctl name="IIR1 Enable Band5" value="0" />
     <ctl name="IIR1 INP1 Volume" value="62" />
+    <ctl name="IIR2 INP1 Volume" value="62" />
     <!-- IIR/voice anc end -->
     <!-- anc handset -->
     <ctl name="ANC Slot" value="0" />
@@ -523,10 +524,21 @@
         <ctl name="Voice2_Tx Mixer AFE_PCM_TX_Voice2" value="1" />
     </path>
 
-    <path name="play-fm">
-        <ctl name="Internal FM RX Volume" value="1" />
-        <ctl name="SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX" value="1" />
-        <ctl name="SLIMBUS_DL_HL Switch" value="1" />
+    <path name="play-fm headphones">
+        <ctl name="DEC2 MUX" value="ADC5"/>
+        <ctl name="DEC1 MUX" value="ADC6"/>
+        <ctl name="IIR1 INP1 MUX" value="DEC2"/>
+        <ctl name="IIR2 INP1 MUX" value="DEC1"/>
+		<ctl name="RX1 MIX1 INP2" value="IIR1"/>
+		<ctl name="RX2 MIX1 INP2" value="IIR2"/>
+    </path>
+
+    <path name="play-fm speaker">
+        <ctl name="DEC2 MUX" value="ADC5"/>
+        <ctl name="DEC1 MUX" value="ADC6"/>
+        <ctl name="IIR1 INP1 MUX" value="DEC2"/>
+        <ctl name="IIR2 INP1 MUX" value="DEC1"/>
+        <ctl name="RX7 MIX1 INP2" value="IIR1"/>
     </path>
 
     <path name="play-fm usb-headphones">
@@ -993,7 +1005,6 @@
         <path name="headphones" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="RX7 MIX1 INP2" value="RX2" />
-        <ctl name="RX7 Digital Volume" value="83" />
     </path>
 
     <path name="speaker-and-headphones-fluid">
