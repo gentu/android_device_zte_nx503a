@@ -44,10 +44,6 @@ TARGET_TOOLS_PREFIX := $(TARGET_TOOLCHAIN_ROOT)/bin/arm-linux-androideabi-
 TARGET_GLOBAL_CFLAGS += -Wno-error=unused-parameter -Wno-error=unused-but-set-variable -Wno-error=maybe-uninitialized -Wno-unknown-warning-option -w
 COMMON_GLOBAL_CFLAGS += -Wno-error=unused-parameter -Wno-error=unused-but-set-variable -Wno-error=maybe-uninitialized -Wno-unknown-warning-option -w
 
-#TARGET_NO_RECOVERY := true
-RECOVERY_VARIANT := twrp
-DEVICE_RESOLUTION := 1080x1920
-BOARD_HAS_NO_REAL_SDCARD := true
 DTS_NAME := msm8974-v2.2-mtp-NX503A
 
 # Krait optimizations
@@ -74,7 +70,7 @@ BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
 
 # Partition information
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1288488960
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2684354560
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -196,20 +192,28 @@ WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/bcm4339/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP := "/system/etc/firmware/bcm4339/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/bcm4339/fw_bcmdhd_p2p.bin"
 
-# Revcovery
+# Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_RECOVERY_ALWAYS_WIPES := true
-BOARD_RECOVERY_HANDLES_MOUNT := true
+#BOARD_RECOVERY_ALWAYS_WIPES := true
+#BOARD_RECOVERY_HANDLES_MOUNT := true
 BOARD_USES_MMCUTILS := true
-BOARD_RECOVERY_SWIPE := true
-RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := device/zte/nx503a/configs/fstab.qcom
-TARGET_RECOVERY_INITRC := device/zte/nx503a/recovery/init.rc
+#BOARD_RECOVERY_SWIPE := true
+#RECOVERY_FSTAB_VERSION := 2
+#TARGET_RECOVERY_FSTAB := device/zte/nx503a/configs/fstab.qcom
+#TARGET_RECOVERY_INITRC := device/zte/nx503a/recovery/init.rc
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+
+# TWRP
+RECOVERY_VARIANT := twrp
+DEVICE_RESOLUTION := 1080x1920
+#TW_INCLUDE_JB_CRYPTO := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight"
+TW_MAX_BRIGHTNESS := 255
 
 # ota
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=NX503A BUILD_FINGERPRINT=zte/NX503A/NX503A:4.4.2/KVT49L/eng.nubia.20140612.211953:user/release-keys PRIVATE_BUILD_DESC="NX503A-user 4.4.2 KVT49L eng.nubia.20140612.211953 release-keys"
