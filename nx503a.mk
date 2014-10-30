@@ -174,15 +174,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8974
 
-# GPS
-PRODUCT_PACKAGES += \
-    gps.msm8974 \
-    libgps.utils \
-    libloc_adapter \
-    libloc_api_v02 \
-    libloc_core \
-    libloc_eng
-
 # NFC packages
 PRODUCT_PACKAGES += \
     libnfc \
