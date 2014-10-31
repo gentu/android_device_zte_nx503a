@@ -153,9 +153,6 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
-# NFC
-BOARD_HAVE_NFC := true
-
 # RIL
 BOARD_RIL_CLASS := ../../../device/zte/nx503a/telephony-common/
 

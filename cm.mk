@@ -8,9 +8,6 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/zte/nx503a/full_nx503a.mk)
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
