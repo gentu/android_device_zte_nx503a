@@ -168,6 +168,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8974
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8974
+
 # NFC packages
 PRODUCT_PACKAGES += \
     libnfc \
