@@ -226,6 +226,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     qcmediaplayer
 
+PRODUCT_PACKAGES += \
+    qcom.fmradio \
+    libqcomfm_jni \
+    FM2 \
+    FMRecord
+
 #PRODUCT_BOOT_JARS += oem-services:nubia:nubia-common:qcom.fmradio:WfdCommon:org.codeaurora.Performance
 
 PRODUCT_PACKAGES += \

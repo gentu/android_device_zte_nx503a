@@ -168,6 +168,10 @@ TARGET_NO_INITLOGO := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := device/zte/nx503a/init/init_nubia.c
 
+# FM Radio
+BOARD_HAVE_QCOM_FM := true
+QCOM_FM_ENABLED := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zte/nx503a/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/zte/nx503a/bluetooth/libbt_vndcfg.txt
