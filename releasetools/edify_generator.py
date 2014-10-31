@@ -251,6 +251,7 @@ class EdifyGenerator(object):
       cmd = ('symlink("%s", ' % (dest,) +
              ",\0".join(['"' + i + '"' for i in sorted(links)]) + ");")
       self.script.append(self._WordWrap(cmd))
+      self.script.append('symlink("fw_bcmdhd_apsta.bin", "/system/etc/firmware/bcm4339/fw_bcmdhd.bin");')
 
   def AppendExtra(self, extra):
     """Append text verbatim to the output script."""
