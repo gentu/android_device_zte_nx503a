@@ -149,8 +149,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Override healthd HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.msm8974
-
 # WebKit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
