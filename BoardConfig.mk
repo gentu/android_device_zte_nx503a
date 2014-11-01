@@ -174,7 +174,6 @@ BOARD_BLUEDROID_VENDOR_CONF := device/zte/nx503a/bluetooth/libbt_vndcfg.txt
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 23
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # Wifi
 BOARD_WLAN_DEVICE := bcmdhd
@@ -209,10 +208,10 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 # TWRP
 RECOVERY_VARIANT := twrp
 DEVICE_RESOLUTION := 1080x1920
-#TW_INCLUDE_JB_CRYPTO := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight"
-TW_MAX_BRIGHTNESS := 255
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file
+TARGET_PREBUILT_RECOVERY_KERNEL := vendor/zte/nx503a/recovery_kernel
+#BOARD_HAS_NO_REAL_SDCARD := true
 
 # ota
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=NX503A BUILD_FINGERPRINT=zte/NX503A/NX503A:4.4.2/KVT49L/eng.nubia.20140612.211953:user/release-keys PRIVATE_BUILD_DESC="NX503A-user 4.4.2 KVT49L eng.nubia.20140612.211953 release-keys"
