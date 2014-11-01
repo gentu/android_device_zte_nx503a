@@ -129,7 +129,7 @@ PRODUCT_PACKAGES += \
 
 # IR packages
 PRODUCT_PACKAGES += \
-    consumerir.msm8974
+    consumerir.default
 
 # Omx
 PRODUCT_PACKAGES += \
