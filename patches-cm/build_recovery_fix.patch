@@ -1,7 +1,7 @@
 
 project build/
 diff --git a/build/core/Makefile b/build/core/Makefile
-index 76c1b5e..36d0ef3 100644
+index 76c1b5e..42ecd9b 100644
 --- a/build/core/Makefile
 +++ b/build/core/Makefile
 @@ -680,22 +680,14 @@ ifneq ($(TARGET_PREBUILT_RECOVERY_KERNEL),)
@@ -28,7 +28,26 @@ index 76c1b5e..36d0ef3 100644
    $(recovery_resources_private) $(recovery_root_private) -type f)
  ifneq ($(TARGET_RECOVERY_FSTAB),)
    recovery_fstab := $(strip $(wildcard $(TARGET_RECOVERY_FSTAB)))
-@@ -784,7 +776,6 @@ $(TARGET_RECOVERY_ROOT_TIMESTAMP): \
+@@ -732,6 +724,9 @@ endif
+ ifneq ($(BOARD_FORCE_RAMDISK_ADDRESS),)
+   INTERNAL_RECOVERYIMAGE_ARGS += --ramdiskaddr $(BOARD_FORCE_RAMDISK_ADDRESS)
+ endif
++INTERNAL_RECOVERY_FILES := $(filter $(TARGET_RECOVERY_OUT)/%, \
++	$(foreach module, $(ALL_MODULES), $(ALL_MODULES.$(module).INSTALLED)) \
++	$(ALL_DEFAULT_INSTALLED_MODULES))
+ 
+ # Keys authorized to sign OTA packages this build will accept.  The
+ # build always uses dev-keys for this; release packaging tools will
+@@ -762,7 +757,7 @@ $(RECOVERY_INSTALL_OTA_KEYS): $(OTA_PUBLIC_KEYS) $(DUMPKEY_JAR) $(extra_keys)
+ 
+ TARGET_RECOVERY_ROOT_TIMESTAMP := $(TARGET_RECOVERY_OUT)/root.ts
+ 
+-$(TARGET_RECOVERY_ROOT_TIMESTAMP): \
++$(TARGET_RECOVERY_ROOT_TIMESTAMP): $(INTERNAL_RECOVERY_FILES) \
+ 		$(INSTALLED_RAMDISK_TARGET) \
+ 		$(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) \
+ 		$(recovery_binary) \
+@@ -784,7 +779,6 @@ $(TARGET_RECOVERY_ROOT_TIMESTAMP): \
  	$(hide) cp -f $(recovery_binary) $(TARGET_RECOVERY_ROOT_OUT)/sbin/
  	mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/system/bin
  	$(hide) cp -rf $(recovery_resources_common) $(TARGET_RECOVERY_ROOT_OUT)/
