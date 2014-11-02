@@ -174,7 +174,7 @@ wifi.supplicant_scan_interval=240
 ro.sys.umsdirtyratio=20
 
 # Set default USB interface
-persist.sys.usb.config=mass_storage,adb
+persist.sys.usb.config=mtp,adb
 
 # DPI
 ro.sf.lcd_density=480
