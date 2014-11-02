@@ -239,9 +239,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-# WiFi overlay configs
-$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
-
 # Inherit from vendor files
 $(call inherit-product, vendor/zte/nx503a/nx503a-vendor.mk)
 
