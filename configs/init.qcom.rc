@@ -171,14 +171,6 @@ on boot
     #venus
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
 
-    # Leds
-    chown system system /sys/class/leds/red/fade_parameter
-    chown system system /sys/class/leds/red/grade_parameter
-    chown system system /sys/class/leds/red/outn
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/red/max_brightness
-    chown system system /sys/class/leds/lcd-backlight/max_brightness
-
     # Compass
     chown system system /sys/class/sensor/compass/int_pin
 
@@ -191,15 +183,6 @@ on property:persist.sys.image.enhance=n
 
 on property:persist.sys.image.enhance=i
     write /sys/kernel/lcd_enhance/saturation 26
-
-on property:persist.sys.image.colortmp=w
-    write /sys/kernel/lcd_enhance/colortmp 24
-
-on property:persist.sys.image.colortmp=n
-    write /sys/kernel/lcd_enhance/colortmp 25
-
-on property:persist.sys.image.colortmp=c
-    write /sys/kernel/lcd_enhance/colortmp 26
 
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
@@ -362,10 +345,7 @@ on post-fs-data
     write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 30000
     write /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor 100000
     write /sys/devices/system/cpu/cpufreq/interactive/timer_slack 30000
-    write /sys/devices/system/cpu/cpufreq/interactive/up_threshold_any_cpu_load 75
-    write /sys/devices/system/cpu/cpufreq/interactive/sync_freq 1036800
-    write /sys/devices/system/cpu/cpufreq/interactive/up_threshold_any_cpu_freq 1728000
-    write /sys/module/cpu_boost/parameters/boost_ms 10
+    write /sys/module/cpu_boost/parameters/boost_ms 20
     write /sys/module/cpu_boost/parameters/sync_threshold 1728000
     write /sys/module/cpu_boost/parameters/input_boost_freq 1497600
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
@@ -467,7 +447,7 @@ service bridgemgrd /system/bin/bridgemgrd
 service qmuxd /system/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -476,7 +456,7 @@ service netmgrd /system/bin/netmgrd
 
 # QCOM sensor
 service sensors /system/bin/sensors.qcom
-    class late_start
+    class main
     user root
     group root
 
@@ -589,7 +569,7 @@ service charger /charger
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
-    group camera system inet input graphics
+    group camera system inet input
 
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B \
@@ -613,7 +593,7 @@ service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
 service thermal-engine /system/bin/thermal-engine
    class main
    user root
-   group radio system
+   group root
 
 service time_daemon /system/bin/time_daemon
     class late_start
