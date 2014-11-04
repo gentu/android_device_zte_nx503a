@@ -22,9 +22,7 @@ def Thanks(self):
     self.script.AppendExtra('ui_print("===========================================");')
     self.script.AppendExtra('ui_print("    Author : MaX51v");')
     self.script.AppendExtra('ui_print("    Thanks :");')
-    self.script.AppendExtra('ui_print("    tenfar,zhaochengw,airk,ivan19871002");')
-    self.script.AppendExtra('ui_print("    xuefy,suky,crazyi,windxixi,");')
-    self.script.AppendExtra('ui_print("    wangsai008,bingo1991,syhost,XianGxin");')
+    self.script.AppendExtra('ui_print("             syhost,XianGxin,Buslik");')
     self.script.AppendExtra('ui_print("===========================================");')
 
 def FullOTA_Assertions(self):
