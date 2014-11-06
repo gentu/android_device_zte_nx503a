@@ -54,6 +54,25 @@ index 0d05c3d..f3b6362 100644
  #ifndef TW_EXCLUDE_ENCRYPTED_BACKUPS
  	mValues.insert(make_pair("tw_include_encrypted_backup", make_pair("1", 0)));
  #else
+diff --git a/bootable/recovery-twrp/gui/action.cpp b/bootable/recovery-twrp/gui/action.cpp
+index 398ef50..e9ffc83 100644
+--- a/bootable/recovery-twrp/gui/action.cpp
++++ b/bootable/recovery-twrp/gui/action.cpp
+@@ -1284,12 +1284,8 @@ int GUIAction::doAction(Action action, int isThreaded /* = 0 */)
+ 				int wipe_dalvik = 0;
+ 				string Sideload_File;
+ 
+-				if (!PartitionManager.Mount_Current_Storage(false)) {
+-					gui_print("Using RAM for sideload storage.\n");
+-					Sideload_File = "/tmp/sideload.zip";
+-				} else {
+-					Sideload_File = DataManager::GetCurrentStoragePath() + "/sideload.zip";
+-				}
++				gui_print("Using RAM for sideload storage.\n");
++				Sideload_File = "/tmp/sideload.zip";
+ 				if (TWFunc::Path_Exists(Sideload_File)) {
+ 					unlink(Sideload_File.c_str());
+ 				}
 diff --git a/bootable/recovery-twrp/gui/devices/1080x1920/res/ui.xml b/bootable/recovery-twrp/gui/devices/1080x1920/res/ui.xml
 index 1367015..4b4d0e2 100644
 --- a/bootable/recovery-twrp/gui/devices/1080x1920/res/ui.xml
@@ -67,3 +86,16 @@ index 1367015..4b4d0e2 100644
  			</object>
  
  			<object type="text" color="%text_color%">
+diff --git a/bootable/recovery-twrp/variables.h b/bootable/recovery-twrp/variables.h
+index c6255a9..cdfeee8 100644
+--- a/bootable/recovery-twrp/variables.h
++++ b/bootable/recovery-twrp/variables.h
+@@ -169,7 +169,7 @@
+ //#define MAX_ARCHIVE_SIZE 52428800LLU // 50MB split for testing
+ 
+ #ifndef CUSTOM_LUN_FILE
+-#define CUSTOM_LUN_FILE "/sys/devices/platform/usb_mass_storage/lun%d/file"
++#define CUSTOM_LUN_FILE "/sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file"
+ #endif
+ 
+ #ifndef TW_BRIGHTNESS_PATH
