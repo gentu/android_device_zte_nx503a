@@ -15,3 +15,14 @@
 
 For update device/kernel/vendor use
     cmtools d
+
+    # Compile
+    . build/envsetup.sh
+    lunch cm_nx503a-userdebug
+    mka otapackage
+
+    ### Also useful
+    # mka installclean
+    # mka bootimage
+    # mka recoveryimage
+
