@@ -1,5 +1,6 @@
 #!/bin/bash
-#cmtools V0.1
+# Author: MaX51v(aka gentu)
+#cmtools V0.2
 
 PATCH_DIR="device/zte/nx503a/patches-cm"
 
@@ -41,6 +42,15 @@ echo -e "\033[32m ###Starting git cleaning### \033[0m"
 #Clean only device independed part
 repo forall -p -c 'if ! echo "$PWD"|egrep -io "/device/|/kernel/|/vendor/">/dev/null; then git checkout -f&&git clean -f&&echo -n "\033[32mSucessful!\033[0m"; fi'
 echo
+}
+
+device_update () {
+  cd "$idir/device/zte/nx503a"
+  git pull
+  cd "$idir/kernel/zte/nx503a"
+  git pull
+  cd "$idir/vendor/zte/nx503a"
+  git pull
 }
 
 repo_sync () {
@@ -87,6 +97,7 @@ fi
 if [[ $1 == '' ]]; then
 echo "Usage: cmtools cup
     'c' = Clean all repos from all uncommited changes and new files
+    'd' = Update device tree
     'u' = Uptodate all repos (repo sync)
     'm PATH FILE_NAME' = Create patch
     'p' = Apply patches from patch folder
@@ -105,6 +116,9 @@ while read -r -n1 char; do
   case $char in
   c)
     clean_all
+  ;;
+  d)
+    device_update
   ;;
   u)
     repo_sync
