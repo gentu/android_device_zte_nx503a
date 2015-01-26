@@ -1,0 +1,131 @@
+#!/bin/bash
+#cmtools V0.1
+
+PATCH_DIR="device/zte/nx503a/patches-cm"
+
+select_dir () {
+FULL_PATH="$(cat ~/.cmtools.conf 2>/dev/null)/$PATCH_DIR"
+idir="$(cat ~/.cmtools.conf 2>/dev/null)"
+if ! [ -d "$FULL_PATH" ]; then
+  FULL_PATH=""
+  idir="$PWD"
+  while [ -n "$idir" ]; do
+    tmp=$idir
+    if [ -z "$idir" ]; then
+      echo "Patch directory is not found"
+      exit 1
+    fi
+    if [ -d "$idir/$PATCH_DIR" ]; then
+      FULL_PATH="$idir/$PATCH_DIR"
+      break
+    fi
+    idir="${tmp%/*}"
+  done
+fi
+
+if [ -z "$FULL_PATH" ]; then
+  echo "ERROR: Path to patch dir is not found"
+  exit 1
+else
+  echo "Patch folder: $FULL_PATH"
+  cd "$idir" 2>/dev/null
+fi
+}
+
+clean_all () {
+echo -e "\033[32m ###Starting git cleaning### \033[0m"
+
+#Full clean
+#repo forall -p -c 'git checkout -f; git clean -f'
+
+#Clean only device independed part
+repo forall -p -c 'if ! echo "$PWD"|egrep -io "/device/|/kernel/|/vendor/">/dev/null; then git checkout -f&&git clean -f&&echo -n "\033[32mSucessful!\033[0m"; fi'
+echo
+}
+
+repo_sync () {
+echo -e "\033[32m ###Starting repo sync### \033[0m"
+repo sync -f -j3
+}
+
+create_patch () {
+  repo diff -u "$var1" > "$FULL_PATH/$var2.patch"||echo -e "\033[31mERROR:\033[0m var1 $var1"
+  echo -e "\033[32mPatch saved to: $FULL_PATH/$var2.patch\033[0m"
+}
+
+apply_patch () {
+echo -e "\033[32m ###Star patching### \033[0m"
+for line in `ls -d1 $FULL_PATH/*`; do
+  if patch -p1 -N --dry-run -s < "$line" > /dev/null; then
+    patch -p1 -N --no-backup-if-mismatch -s < "$line"
+    echo -e "\033[32m ###Apply patch $line### \033[0m"
+  else
+    if patch -p1 -N -R --dry-run -s < "$line" > /dev/null; then
+      echo -e "\033[32m ###Patch is applied $line### \033[0m"
+    else
+      echo -e "\033[35m ### Fail $line ### \033[0m"
+      exit 1
+    fi
+  fi
+done
+}
+
+incremental_ota () {
+  ./build/tools/releasetools/ota_from_target_files -i "$var1" "$var2"
+}
+
+if [[ "$1" == 's' ]]; then
+  pwd > ~/.cmtools.conf
+  echo "Current folder has been setted as path to sources dir"
+  exit 0
+elif [[ "$1" == 's-' ]]; then
+  rm -f ~/.cmtools.conf
+  echo "Unsetted path to sources dir"
+  exit 0
+fi
+
+if [[ $1 == '' ]]; then
+echo "Usage: cmtools cup
+    'c' = Clean all repos from all uncommited changes and new files
+    'u' = Uptodate all repos (repo sync)
+    'm PATH FILE_NAME' = Create patch
+    'p' = Apply patches from patch folder
+    'i old.zip new.zip' = Incremental OTA package
+    's' = Set path to Android sources folder(\"cmtools s-\" for unset)"
+exit 0
+fi
+
+var1="$2"
+var2="$3"
+
+# Поиск полного пути к директории с патчами
+select_dir
+
+while read -r -n1 char; do
+  case $char in
+  c)
+    clean_all
+  ;;
+  u)
+    repo_sync
+  ;;
+  p)
+    apply_patch
+  ;;
+  m)
+    create_patch
+  ;;
+  i)
+    incremental_ota
+  ;;
+  s)
+    #Set path to android sources folder
+  ;;
+  '')
+  ;;
+  *)
+    echo "No command for \"$char\""
+  ;;
+  esac
+done <<< "$1"
+
