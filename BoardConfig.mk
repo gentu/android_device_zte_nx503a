@@ -57,7 +57,7 @@ TARGET_KRAIT_BIONIC_PLDSIZE := 64
 # Kernel information
 TARGET_KERNEL_SOURCE := kernel/zte/nx503a
 TARGET_KERNEL_CONFIG := msm8974-NX503A_defconfig
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.selinux=disabled
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000 
