@@ -39,10 +39,6 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
      $(LOCAL_PATH)/configs/ueventd.qcom.rc:root/ueventd.qcom.rc
 
-# TWRP
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/configs/twrp.fstab:recovery/root/etc/twrp.fstab
-
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
