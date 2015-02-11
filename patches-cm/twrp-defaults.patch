@@ -54,25 +54,6 @@ index 0d05c3d..f3b6362 100644
  #ifndef TW_EXCLUDE_ENCRYPTED_BACKUPS
  	mValues.insert(make_pair("tw_include_encrypted_backup", make_pair("1", 0)));
  #else
-diff --git a/bootable/recovery-twrp/gui/action.cpp b/bootable/recovery-twrp/gui/action.cpp
-index 398ef50..e9ffc83 100644
---- a/bootable/recovery-twrp/gui/action.cpp
-+++ b/bootable/recovery-twrp/gui/action.cpp
-@@ -1284,12 +1284,8 @@ int GUIAction::doAction(Action action, int isThreaded /* = 0 */)
- 				int wipe_dalvik = 0;
- 				string Sideload_File;
- 
--				if (!PartitionManager.Mount_Current_Storage(false)) {
--					gui_print("Using RAM for sideload storage.\n");
--					Sideload_File = "/tmp/sideload.zip";
--				} else {
--					Sideload_File = DataManager::GetCurrentStoragePath() + "/sideload.zip";
--				}
-+				gui_print("Using RAM for sideload storage.\n");
-+				Sideload_File = "/tmp/sideload.zip";
- 				if (TWFunc::Path_Exists(Sideload_File)) {
- 					unlink(Sideload_File.c_str());
- 				}
 diff --git a/bootable/recovery-twrp/gui/devices/1080x1920/res/ui.xml b/bootable/recovery-twrp/gui/devices/1080x1920/res/ui.xml
 index 1367015..4b4d0e2 100644
 --- a/bootable/recovery-twrp/gui/devices/1080x1920/res/ui.xml
