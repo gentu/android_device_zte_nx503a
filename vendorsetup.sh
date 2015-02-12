@@ -15,3 +15,4 @@
 #
 
 add_lunch_combo cm_nx503a-userdebug
+add_lunch_combo cm_nx503a-eng
