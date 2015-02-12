@@ -212,10 +212,7 @@ TARGET_PREBUILT_RECOVERY_KERNEL := vendor/zte/nx503a/recovery_kernel
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=NX503A BUILD_FINGERPRINT=zte/NX503A/NX503A:4.4.2/KVT49L/eng.nubia.20140612.211953:user/release-keys PRIVATE_BUILD_DESC="NX503A-user 4.4.2 KVT49L eng.nubia.20140612.211953 release-keys"
 
 # OTA
-#TARGET_UNIFIED_DEVICE := true //Fix package ota zip error ,for cm10 tools
 TARGET_OTA_ASSERT_DEVICE := NX503A,nx503a,Z5S,z5s,NX503AJ,nx503aj,Z5SN,z5sn
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/zte/nx503a/releasetools/zte_ota_from_target_files
-TARGET_RELEASETOOLS_EXTENSIONS := device/zte/nx503a/releasetools
 
 BOARD_SEPOLICY_DIRS += \
         device/zte/nx503a/sepolicy
