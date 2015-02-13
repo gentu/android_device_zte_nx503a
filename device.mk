@@ -241,7 +241,3 @@ DEVICE_PACKAGE_OVERLAYS += device/zte/nx503a/overlay
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-# Inherit from vendor files
-$(call inherit-product, vendor/zte/nx503a/nx503a-vendor.mk)
-
