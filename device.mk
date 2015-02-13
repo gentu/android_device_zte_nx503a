@@ -130,10 +130,6 @@ PRODUCT_PACKAGES += \
     copybit.msm8974 \
     memtrack.msm8974
 
-# IR packages
-PRODUCT_PACKAGES += \
-    consumerir.msm8974
-
 # Omx
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
