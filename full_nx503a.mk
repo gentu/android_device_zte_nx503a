@@ -1,8 +1,8 @@
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := full_NX503A
-PRODUCT_DEVICE := NX503A
+PRODUCT_NAME := full_nx503a
+PRODUCT_DEVICE := nx503a
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := AOSP on Z5S
 PRODUCT_MANUFACTURER := ZTE
