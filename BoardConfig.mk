@@ -113,6 +113,7 @@ USE_MINIKIN := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # Recovery
+TARGET_RECOVERY_FSTAB := device/zte/nx503a/configs/fstab.qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_HAS_LARGE_FILESYSTEM := true
