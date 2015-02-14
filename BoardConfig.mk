@@ -31,6 +31,7 @@ BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 TARGET_KERNEL_CONFIG := msm8974-NX503A_defconfig
 TARGET_KERNEL_SOURCE := kernel/zte/nx503a
+BOARD_KERNEL_SEPARATED_DT := true
 DTS_NAME := msm8974-v2.2-mtp-NX503A
 BOARD_CUSTOM_BOOTIMG_MK := device/zte/nx503a/mkbootimg.mk
 
