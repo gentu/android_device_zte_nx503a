@@ -40,7 +40,7 @@ echo -e "\033[32m ###Starting git cleaning### \033[0m"
 #repo forall -p -c 'git checkout -f; git clean -f'
 
 #Clean only device independed part
-repo forall -p -c 'if ! echo "$PWD"|egrep -io "/device/|/kernel/|/vendor/">/dev/null; then git checkout -f&&git clean -f&&echo -n "\033[32mSucessful!\033[0m"; fi'
+repo forall -p -c 'if ! echo "$PWD"|egrep -io "/device/|/kernel/|/vendor/">/dev/null; then git checkout -f&&git clean -fdx&&echo -n "\033[32mSucessful!\033[0m"; fi'
 echo
 }
 
