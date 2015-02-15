@@ -75,15 +75,19 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zte/nx503a/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/zte/nx503a/bluetooth/libbt_vndcfg.txt
 
 # WiFi
+BOARD_NO_WIFI_HAL := true
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
 BOARD_WLAN_DEVICE           := bcmdhd
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_HOSTAPD_DRIVER        := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
+WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/firmware/bcm4339/fw_bcmdhd.bin nvram_path=/system/etc/firmware/bcm4339/nvram.txt"
+WIFI_DRIVER_MODULE_AP_ARG := "firmware_path=/system/etc/firmware/bcm4339/fw_bcmdhd_apsta.bin nvram_path=/system/etc/firmware/bcm4339/nvram.txt"
+WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/bcm4339/fw_bcmdhd.bin"
+WIFI_DRIVER_FW_PATH_AP := "/system/etc/firmware/bcm4339/fw_bcmdhd_apsta.bin"
+WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/bcm4339/fw_bcmdhd_p2p.bin"
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
