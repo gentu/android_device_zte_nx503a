@@ -238,3 +238,6 @@ ro.com.android.mobiledata=false
 
 # Video enhancer (w=low, n=middle, i=high)
 persist.sys.image.enhance=i
+
+# Set USB OTG enabled to add support for USB storage type
+persist.sys.isUsbOtgEnabled=1
