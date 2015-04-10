@@ -19,5 +19,5 @@
 /dev/block/platform/msm_sdcc.1/by-name/aboot        /aboot          emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/splash       /splash         emmc    defaults                                                        defaults
 
-/devices/msm_sdcc.1/mmc_host         auto          vfat         defaults                                    voldmanaged=sdcard0:23,nonremovable,noemulatedsd
-/devices/platform/xhci-hcd auto vfat defaults voldmanaged=usbdisk:auto
+/devices/msm_sdcc.1/mmc_host                        auto            auto    defaults                                                        voldmanaged=sdcard0:23,noemulatedsd
+/devices/platform/xhci-hcd                          auto            auto    defaults                                                        voldmanaged=usbdisk:auto
