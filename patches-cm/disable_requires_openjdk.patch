@@ -1,0 +1,15 @@
+
+project build/
+diff --git a/build/core/main.mk b/build/core/main.mk
+index cea8327..c9ab6af 100644
+--- a/build/core/main.mk
++++ b/build/core/main.mk
+@@ -181,7 +181,7 @@ endif
+ requires_openjdk := false
+ ifeq ($(LEGACY_USE_JAVA6),)
+ ifeq ($(HOST_OS), linux)
+-requires_openjdk := true
++requires_openjdk := false
+ endif
+ endif
+ 
