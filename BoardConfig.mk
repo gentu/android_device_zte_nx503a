@@ -118,6 +118,9 @@ USE_MINIKIN := true
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# Color Calibration
+BOARD_HARDWARE_CLASS := device/zte/nx503a/cmhw
+
 # Recovery
 TARGET_RECOVERY_FSTAB := device/zte/nx503a/configs/twrp.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
