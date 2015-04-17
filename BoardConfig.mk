@@ -29,7 +29,7 @@ BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000 
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
-TARGET_KERNEL_CONFIG := msm8974-NX503A_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_nx503a_defconfig
 TARGET_KERNEL_SOURCE := kernel/zte/nx503a
 BOARD_KERNEL_SEPARATED_DT := true
 DTS_NAME := msm8974-v2.2-mtp-NX503A
