@@ -117,7 +117,7 @@ EXTENDED_FONT_FOOTPRINT := true
 BOARD_HARDWARE_CLASS := device/zte/nx503a/cmhw
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/zte/nx503a/configs/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/zte/nx503a/configs/fstab.qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_HAS_LARGE_FILESYSTEM := true
