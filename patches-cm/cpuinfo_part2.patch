@@ -1,0 +1,105 @@
+
+project packages/apps/Settings/
+diff --git a/packages/apps/Settings/res/values/cm_strings.xml b/packages/apps/Settings/res/values/cm_strings.xml
+index bb07175..c57a7f0 100644
+--- a/packages/apps/Settings/res/values/cm_strings.xml
++++ b/packages/apps/Settings/res/values/cm_strings.xml
+@@ -333,6 +333,11 @@
+     <string name="advanced_reboot_title">Advanced reboot</string>
+     <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery, bootloader or performing a soft reboot</string>
+ 
++    <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
++    <string name="show_cpu_info">Show CPU info</string>
++    <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
++    <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
++
+     <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
+     <string name="enable_adb_cm">Android debugging</string>
+     <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
+diff --git a/packages/apps/Settings/res/xml/development_prefs.xml b/packages/apps/Settings/res/xml/development_prefs.xml
+index 9254eaf..cf7a18a 100644
+--- a/packages/apps/Settings/res/xml/development_prefs.xml
++++ b/packages/apps/Settings/res/xml/development_prefs.xml
+@@ -342,6 +342,11 @@
+             android:title="@string/show_cpu_usage"
+             android:summary="@string/show_cpu_usage_summary"/>
+ 
++        <SwitchPreference
++            android:key="show_cpu_info"
++            android:title="@string/show_cpu_info"
++            android:summary="@string/show_cpu_info_summary"/>
++
+         <ListPreference
+             android:key="track_frame_time"
+             android:title="@string/track_frame_time"
+diff --git a/packages/apps/Settings/src/com/android/settings/DevelopmentSettings.java b/packages/apps/Settings/src/com/android/settings/DevelopmentSettings.java
+index 2b36e13..4196a9c 100644
+--- a/packages/apps/Settings/src/com/android/settings/DevelopmentSettings.java
++++ b/packages/apps/Settings/src/com/android/settings/DevelopmentSettings.java
+@@ -130,6 +130,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
+     private static final String USB_AUDIO_KEY = "usb_audio";
+     private static final String USE_AWESOMEPLAYER_PROPERTY = "persist.sys.media.use-awesome";
+     private static final String SHOW_CPU_USAGE_KEY = "show_cpu_usage";
++    private static final String SHOW_CPU_INFO_KEY = "show_cpu_info";
+     private static final String FORCE_HARDWARE_UI_KEY = "force_hw_ui";
+     private static final String FORCE_MSAA_KEY = "force_msaa";
+     private static final String TRACK_FRAME_TIME_KEY = "track_frame_time";
+@@ -231,6 +232,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
+     private SwitchPreference mShowScreenUpdates;
+     private SwitchPreference mDisableOverlays;
+     private SwitchPreference mShowCpuUsage;
++    private SwitchPreference mShowCpuInfo;
+     private SwitchPreference mForceHardwareUi;
+     private SwitchPreference mForceMsaa;
+     private SwitchPreference mShowHwScreenUpdates;
+@@ -380,6 +382,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
+         mShowScreenUpdates = findAndInitSwitchPref(SHOW_SCREEN_UPDATES_KEY);
+         mDisableOverlays = findAndInitSwitchPref(DISABLE_OVERLAYS_KEY);
+         mShowCpuUsage = findAndInitSwitchPref(SHOW_CPU_USAGE_KEY);
++        mShowCpuInfo = findAndInitSwitchPref(SHOW_CPU_INFO_KEY);
+         mForceHardwareUi = findAndInitSwitchPref(FORCE_HARDWARE_UI_KEY);
+         mForceMsaa = findAndInitSwitchPref(FORCE_MSAA_KEY);
+         mTrackFrameTime = addListPreference(TRACK_FRAME_TIME_KEY);
+@@ -610,6 +613,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
+         updateShowTouchesOptions();
+         updateFlingerOptions();
+         updateCpuUsageOptions();
++        updateCpuInfoOptions();
+         updateHardwareUiOptions();
+         updateMsaaOptions();
+         updateTrackFrameTimeOptions();
+@@ -1355,6 +1359,25 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
+         }
+     }
+ 
++    private void updateCpuInfoOptions() {
++        updateSwitchPreference(mShowCpuInfo, Settings.Global.getInt(getActivity().getContentResolver(),
++                Settings.Global.SHOW_CPU, 0) != 0);
++    }
++
++    private void writeCpuInfoOptions() {
++        boolean value = mShowCpuInfo.isChecked();
++        Settings.Global.putInt(getActivity().getContentResolver(),
++                Settings.Global.SHOW_CPU, value ? 1 : 0);
++        Intent service = (new Intent())
++                .setClassName("com.android.systemui", "com.android.systemui.CPUInfoService");
++        if (value) {
++            getActivity().startService(service);
++        } else {
++            getActivity().stopService(service);
++        }
++    }
++
++
+     private void writeImmediatelyDestroyActivitiesOptions() {
+         try {
+             ActivityManagerNative.getDefault().setAlwaysFinish(
+@@ -1693,6 +1716,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
+             writeDisableOverlaysOption();
+         } else if (preference == mShowCpuUsage) {
+             writeCpuUsageOptions();
++        } else if (preference == mShowCpuInfo) {
++            writeCpuInfoOptions();
+         } else if (preference == mImmediatelyDestroyActivities) {
+             writeImmediatelyDestroyActivitiesOptions();
+         } else if (preference == mShowAllANRs) {
