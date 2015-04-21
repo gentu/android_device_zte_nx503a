@@ -105,12 +105,7 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 TARGET_PROVIDES_LIBLIGHT := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-        device/zte/nx503a/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-        file_contexts \
-        app.te
+include device/qcom/sepolicy/sepolicy.mk
 
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
