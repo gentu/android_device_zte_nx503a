@@ -304,6 +304,12 @@ on post-fs-data
 
     # devfreq
     write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
+    write /sys/devices/qcom,cpubw.40/devfreq/qcom,cpubw.40/cpubw_hwmon/io_percent 20
+
+    # gpu freq governor
+    write /sys/class/kgsl/kgsl-3d0/devfreq/governor "simple_ondemand"
+    write /sys/class/kgsl/kgsl-3d0/devfreq/simple_ondemand/downdifferential 1
+    write /sys/class/kgsl/kgsl-3d0/devfreq/simple_ondemand/upthreshold 95
 
     # ondemand
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "ondemand"
@@ -395,6 +401,8 @@ on charger
     write /sys/devices/system/cpu/cpu3/online 0
     #start mpdecision
     write /sys/module/intelli_plug/parameters/intelli_plug_active 1
+    write /sys/module/intelli_plug/parameters/nr_run_profile_sel 5
+    write /sys/module/intelli_plug/parameters/touch_boost_active 0
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
@@ -424,6 +432,9 @@ on property:sys.boot_completed=1
     write /sys/module/msm_pm/modes/cpu3/retention/idle_enabled 1
     #start mpdecision
     write /sys/module/intelli_plug/parameters/intelli_plug_active 1
+    write /sys/module/intelli_plug/parameters/nr_run_profile_sel 2
+    write /sys/module/intelli_plug/parameters/touch_boost_active 0
+    write /sys/module/intelli_plug/parameters/screen_off_max 960000
 
     # enable slimport detection
     write /sys/module/slimport/parameters/enable_irq 1
