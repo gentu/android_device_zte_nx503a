@@ -241,3 +241,6 @@ persist.sys.image.enhance=i
 
 # Set USB OTG enabled to add support for USB storage type
 persist.sys.isUsbOtgEnabled=1
+
+# Fix for Google Cardboard
+qemu.sf.lcd_density=480
