@@ -396,8 +396,8 @@ on charger
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
-    #start mpdecision
-    write /sys/module/intelli_plug/parameters/intelli_plug_active 1
+    start mpdecision
+    #write /sys/module/intelli_plug/parameters/intelli_plug_active 1
     write /sys/module/intelli_plug/parameters/nr_run_profile_sel 5
     write /sys/module/intelli_plug/parameters/touch_boost_active 0
 
@@ -427,8 +427,8 @@ on property:sys.boot_completed=1
     write /sys/module/msm_pm/modes/cpu1/retention/idle_enabled 1
     write /sys/module/msm_pm/modes/cpu2/retention/idle_enabled 1
     write /sys/module/msm_pm/modes/cpu3/retention/idle_enabled 1
-    #start mpdecision
-    write /sys/module/intelli_plug/parameters/intelli_plug_active 1
+    start mpdecision
+    #write /sys/module/intelli_plug/parameters/intelli_plug_active 1
     write /sys/module/intelli_plug/parameters/nr_run_profile_sel 2
     write /sys/module/intelli_plug/parameters/touch_boost_active 0
     write /sys/module/intelli_plug/parameters/screen_off_max 960000
