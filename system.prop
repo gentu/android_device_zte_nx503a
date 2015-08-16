@@ -219,10 +219,11 @@ persist.radio.mode_pref_nv10=1
 persist.radio.prefer_spn=2
 persist.radio.snapshot_disabled=1
 persist.radio.tdscdma_present=2
-persist.radio.use_se_table_only=1 
+persist.radio.use_se_table_only=1
+persist.telephony.oosisdc=false
 ril.data.bootingpopup=0
 ril.ipv6.rmnet0.enable=0
-persist.telephony.oosisdc=false
+ro.ril.force_eri_from_xml=true
 ro.ril.enable.dtm = 0
 ro.ril.transmitpower=true
 
