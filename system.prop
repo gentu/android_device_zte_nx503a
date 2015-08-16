@@ -184,9 +184,6 @@ ro.chipname=msm8974
 #Vendor lib
 ro.vendor.extension_library=/vendor/lib/libqc-opt.so
 
-# Do not power down SIM card when modem is sent to Low Power Mode.
-persist.radio.apm_sim_not_pwdn=1
-
 # Upto 3 layers can go through overlays
 com.qc.hardware=true
 
@@ -216,8 +213,7 @@ ro.gps.agps_provider=1
 # Radio
 persist.radio.adb_log_on=1
 persist.radio.add_power_save=1
-persist.radio.apm_sim_not_pwdn=1
-persist.radio.fill_eons=1 
+persist.radio.fill_eons=1
 persist.radio.kickstart=on
 persist.radio.mode_pref_nv10=1
 persist.radio.prefer_spn=2
