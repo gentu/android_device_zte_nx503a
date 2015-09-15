@@ -161,7 +161,7 @@ on boot
     mkdir /data/tombstones 0777 system system
     mkdir /data/tombstones/ramdump 0777 system system
     restorecon_recursive /data/tombstones
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
 
     # Compass
     chown system system /sys/class/sensor/compass/int_pin
