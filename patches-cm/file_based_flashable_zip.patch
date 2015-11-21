@@ -9,6 +9,6 @@ index c1ad7dd..86d05b8 100644
  	$(hide) MKBOOTIMG=$(MKBOOTIMG) \
  	   $(OTA_FROM_TARGET_SCRIPT) -v \
 -	   --block \
+ 	   $(if $(WITH_LZMA_OTA), -z) \
  	   -p $(HOST_OUT) \
  	   -k $(KEY_CERT_PAIR) \
- 	   --backup=$(backuptool) \
