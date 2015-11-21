@@ -103,6 +103,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/configs/wifi/nvram.txt:system/etc/firmware/bcm4339/nvram.txt
 
+include hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
@@ -243,7 +245,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery Options
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cwm.forbid_format=/persist,/firmware,/boot,/sbl1,/tz,/rpm,/sdi,/aboot,/s
+    ro.cwm.forbid_format=/persist,/firmware,/boot,/sbl1,/tz,/rpm,/sdi,/aboot,/splash,/custom \
     ro.cwm.forbid_mount=/persist,/firmware
 
 # Device uses high-density artwork where available

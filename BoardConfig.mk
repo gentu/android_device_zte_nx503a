@@ -14,6 +14,7 @@ TARGET_NO_RADIOIMAGE := true
 BOARD_USES_SECURE_SERVICES := true
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # Qualcomm
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
@@ -26,7 +27,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.selinux=disabled
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000 
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
@@ -57,11 +58,15 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_USES_ION := true
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
+AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
+AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
 AUDIO_FEATURE_ENABLED_USBAUDIO := true
 
 # FM Radio
@@ -81,12 +86,10 @@ BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_HOSTAPD_DRIVER        := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/firmware/bcm4339/fw_bcmdhd.bin nvram_path=/system/etc/firmware/bcm4339/nvram.txt"
-WIFI_DRIVER_MODULE_AP_ARG := "firmware_path=/system/etc/firmware/bcm4339/fw_bcmdhd.bin nvram_path=/system/etc/firmware/bcm4339/nvram.txt"
-WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/bcm4339/fw_bcmdhd.bin"
-WIFI_DRIVER_FW_PATH_AP := "/system/etc/firmware/bcm4339/fw_bcmdhd.bin"
-WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/bcm4339/fw_bcmdhd.bin"
+WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/bcm4339/fw_bcmdhd.bin"
+WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/bcm4339/fw_bcmdhd.bin"
+WIFI_DRIVER_MODULE_ARG      := "nvram_path=/system/etc/firmware/bcm4339/nvram.txt"
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
